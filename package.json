@@ -1,7 +1,7 @@
 {
-  "name": "es6-boilerplate",
+  "name": "App",
   "version": "1.0.0",
-  "description": "Standard ES6 Boilerplate configured with babel, webpack and eslint.",
+  "description": "Daily commute planner",
   "main": "index.js",
   "scripts": {
     "start": "npm-run-all --parallel dev:server lint:watch",
@@ -12,10 +12,10 @@
     "lint:watch": "npm run lint -- --watch"
   },
   "keywords": [
-    "es6"
+    "es6", "map", "commute"
   ],
-  "author": "metagrover",
-  "license": "ISC",
+  "author": "jakmat",
+  "license": "CC BY-NC-ND",
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
