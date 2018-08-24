@@ -1,1 +1,3 @@
-console.log('app');
+import './app.less';
+
+console.log('.app');
