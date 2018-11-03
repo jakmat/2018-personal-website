@@ -19,6 +19,9 @@ export default {
 </script>
 
 <style lang="less">
+@import url("~leaflet/dist/leaflet.css");
+
+
 body {
   margin: 0;
   padding: 0;

@@ -17,20 +17,25 @@ export default {
   },
 
   mounted() {
-    this.map = leaflet.map('leaflet').setView([51.505, -0.09], 13);
-    // this.addMap();
+    this.map = leaflet.map('leaflet').setView([51.743323, 19.402368], 16);
+    this.addMap();
     console.log(this.map);
 
   },
 
   methods: {
     addMap() {
-      leaflet.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+      const map = this.map;
+      const api = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}';
+      const options = {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
         maxZoom: 18,
         id: 'mapbox.streets',
+        // accessToken: 'your.mapbox.access.token'
         accessToken: 'pk.eyJ1IjoiamFrbWF0IiwiYSI6ImNqbzFzaDBjcjBkcGgza29hbmU4dWV2NzcifQ.60inihwM9A5HEuK0pHvtIQ'
-      }).addTo(this.map);
+      };
+
+      leaflet.tileLayer(api, options).addTo(map);
     }
   }
 }
@@ -43,8 +48,8 @@ export default {
   height: 100%;
   
   #leaflet {
-    width: 500px;
-    height: 250px;
+    width: 100%;
+    height: 100%;
 
   }
 }
