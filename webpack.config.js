@@ -23,10 +23,6 @@ module.exports = {
                 use: 'babel-loader'
             },
             {
-                test: path.resolve(__dirname, 'node_modules/jsonstream/index.js'),
-                use: 'shebang-loader',
-            },
-            {
                 test: /\.less$/,
                 use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
                     fallback: 'style-loader',
