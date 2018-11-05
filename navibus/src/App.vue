@@ -11,9 +11,14 @@ import Panel from './components/Panel/Panel.vue';
 
 export default {
   name: 'App',
+
   components: {
     Map,
     Panel
+  },
+
+  created() {
+    console.log(this.$store);
   }
 }
 </script>
