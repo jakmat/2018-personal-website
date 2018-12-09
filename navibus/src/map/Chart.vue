@@ -8,7 +8,7 @@
 import leaflet from 'leaflet'; 
 
 export default {
-  name: 'Map',
+  name: 'Chart',
 
   data() {
     return {
@@ -45,12 +45,11 @@ export default {
 .map {
   background-color: #202020;
   width: 80vw;
-  height: 100%;
+  height: 90vh;
   
   #leaflet {
     width: 100%;
-    height: 100%;
-
+    height: 100%;  
   }
 }
 </style>

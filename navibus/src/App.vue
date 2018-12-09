@@ -1,21 +1,26 @@
 <template>
   <div id="app">
-    <Map />
-    <Panel />
+    <navbar />
+    <div class="main">
+      <chart />
+      <panel />
+    </div>
   </div>
 </template>
 
 <script>
 import store from 'vuex';
-import Map from './map/Map.vue';
+import Navbar from './components/Navbar/Navbar.vue';
+import Chart from './map/Chart.vue';
 import Panel from './components/Panel/Panel.vue';
 
 export default {
   name: 'App',
 
   components: {
-    Map,
-    Panel
+    Chart,
+    Panel,
+    Navbar
   },
 
   mounted() {
@@ -50,6 +55,16 @@ body {
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+
+  .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    // background-color: yellow;
+    width: 100%;
+    height: 90%;
+  }
 } 
 </style>
