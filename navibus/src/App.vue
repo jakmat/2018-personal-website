@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import store from 'vuex';
 import Map from './map/Map.vue';
 import Panel from './components/Panel/Panel.vue';
 
@@ -17,8 +18,21 @@ export default {
     Panel
   },
 
-  created() {
-    console.log(this.$store);
+  mounted() {
+    console.log(this)
+    this.updateVariable(1987);
+  },
+
+  computed: {
+    // ...mapGetters(['variable'])
+  },
+
+  methods: {
+    async updateVariable(value) {
+      console.log(this.$store)
+
+      await this.$store.dispatch('changeVariable', value);
+    }
   }
 }
 </script>
