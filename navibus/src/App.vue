@@ -44,11 +44,14 @@ export default {
 
 <style lang="less">
 @import url("~leaflet/dist/leaflet.css");
+@import './global.less';
 
 
 body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color: @background-main;
 }
 
 #app {
@@ -62,7 +65,6 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    // background-color: yellow;
     width: 100%;
     height: 90%;
   }

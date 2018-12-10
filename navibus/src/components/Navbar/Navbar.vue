@@ -1,6 +1,5 @@
 <template>
   <div class="navbar">
-    <!-- <div class="container">
       <div class="menu">
         <header class="navbar-header">
           <a href="/" class="navbar-brand menu__title">
@@ -24,7 +23,6 @@
           </ul>
         </nav>
       </div>
-    </div> -->
   </div>
 </template>
 
@@ -38,6 +36,5 @@ export default {
 .navbar {
   width: 100vw;
   height: 10%;
-  background-color: red;
 }
 </style>

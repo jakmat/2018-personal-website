@@ -19,7 +19,7 @@ export default {
   mounted() {
     this.map = leaflet.map('leaflet').setView([51.743323, 19.402368], 16);
     this.addMap();
-    console.log(this.map);
+    // console.log('map', this.map);
   },
 
   methods: {
@@ -42,7 +42,7 @@ export default {
 
 <style lang="less" scoped>
 .map {
-  background-color: #202020;
+  // background-color: #202020;
   width: 80vw;
   height: 90vh;
 

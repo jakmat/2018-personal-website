@@ -4,6 +4,7 @@ import leaflet from 'leaflet';
 import App from './App.vue';
 import store from './store';
 
+console.clear();
 Vue.config.productionTip = false;
 
 Vue.use(
