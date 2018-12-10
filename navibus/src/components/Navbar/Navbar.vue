@@ -1,28 +1,21 @@
 <template>
   <div class="navbar">
-      <div class="menu">
-        <header class="navbar-header">
-          <a href="/" class="navbar-brand menu__title">
-              <img class="menu__title--logo" src="../../assets/logo2.png" alt="Logo złożone z połączonych liter inicjałów JAKMAT">
-              <h1 class="menu__title--headline">Jakub Matusiak</h1>
-              <h1 class="menu__title--headline">Jakub Matusiak</h1>
-            </a>
-          <button type="button" class="navbar-toggle align-middle menu__btn" data-toggle='collapse' data-target='.navbar-collapse'>
-              <span class="sr-only">Toggle nav</span>
-              <span class='icon-bar menu__btn--bar'></span>
-              <span class='icon-bar menu__btn--bar'></span>
-              <span  class='icon-bar menu__btn--bar'></span>
-            </button>
-        </header>
-        <nav>
-          <ul class="nav navbar-nav navbar-right collapse navbar-collapse menu__nav">
-            <li class="menu__nav--link"><a href="#" class="active">O mnie</a></li>
-            <li class="menu__nav--link"><a href="#">Projekty</a></li>
-            <li class="menu__nav--link"><a href="#">Inspiracje</a></li>
-            <li class="menu__nav--link"><a href="#">Kontakt</a></li>
-          </ul>
-        </nav>
-      </div>
+    <div class="navbar__title">
+      <img class="navbar__title--logo" src="../../assets/logo2.png" alt="Logo złożone z połączonych liter inicjałów JAKMAT">
+      <h1 class="navbar__title--person">Jakub Matusiak</h1>
+    </div>
+    <!-- <button type="button" class="navbar__button">
+        <span class="sr-only">Toggle nav</span>
+        <span class='icon-bar menu__btn--bar'></span>
+        <span class='icon-bar menu__btn--bar'></span>
+        <span  class='icon-bar menu__btn--bar'></span>
+    </button> -->
+    <ul class="navbar__menu">
+      <li class="navbar__menu--link"><a href="#" class="active">O mnie</a></li>
+      <li class="navbar__menu--link"><a href="#">Projekty</a></li>
+      <li class="navbar__menu--link"><a href="#">Inspiracje</a></li>
+      <li class="navbar__menu--link"><a href="#">Kontakt</a></li>
+    </ul>
   </div>
 </template>
 
@@ -33,8 +26,37 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import '../../global.less';
+
 .navbar {
   width: 100vw;
   height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+
+    &--logo {
+      display: block;
+      height: 50px;
+    }
+
+    &--person {
+      color: @font-color-light;
+      font-size: @font-size-title;
+      padding: 0 10px;
+    }
+  }
+
+  &__menu {
+
+  }
 }
 </style>

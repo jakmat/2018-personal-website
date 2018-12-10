@@ -9,8 +9,10 @@ export default {
 </script>
 
 <style lang="less" scoped>
+
 .panel {
-  background-color: #252525;
+// @import '@/global.less';
+  // background-color: @panel-background;
   width: 20vw;
   height: 100%;
 }

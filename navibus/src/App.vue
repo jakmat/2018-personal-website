@@ -52,6 +52,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: @background-main;
+  color: @font-color-light;
+  // font-family: 
 }
 
 #app {
