@@ -7,5 +7,8 @@ module.exports = {
                 '@/': path.resolve(__dirname, 'client/src/')
             }
         }
+    },
+    devServer: { 
+        open: true 
     }
 }
