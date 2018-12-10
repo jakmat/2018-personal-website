@@ -5,14 +5,14 @@
 </template>
 
 <script>
-import leaflet from 'leaflet'; 
+import leaflet from 'leaflet';
 
 export default {
   name: 'Chart',
 
   data() {
     return {
-      map: null
+      map: null,
     };
   },
 
@@ -20,7 +20,6 @@ export default {
     this.map = leaflet.map('leaflet').setView([51.743323, 19.402368], 16);
     this.addMap();
     console.log(this.map);
-
   },
 
   methods: {
@@ -32,13 +31,13 @@ export default {
         maxZoom: 18,
         id: 'mapbox.streets',
         // accessToken: 'your.mapbox.access.token'
-        accessToken: 'pk.eyJ1IjoiamFrbWF0IiwiYSI6ImNqbzFzaDBjcjBkcGgza29hbmU4dWV2NzcifQ.60inihwM9A5HEuK0pHvtIQ'
+        accessToken: 'pk.eyJ1IjoiamFrbWF0IiwiYSI6ImNqbzFzaDBjcjBkcGgza29hbmU4dWV2NzcifQ.60inihwM9A5HEuK0pHvtIQ',
       };
 
       leaflet.tileLayer(api, options).addTo(map);
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style lang="less" scoped>
@@ -46,10 +45,10 @@ export default {
   background-color: #202020;
   width: 80vw;
   height: 90vh;
-  
+
   #leaflet {
     width: 100%;
-    height: 100%;  
+    height: 100%;
   }
 }
 </style>

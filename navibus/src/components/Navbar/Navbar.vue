@@ -30,8 +30,8 @@
 
 <script>
 export default {
-    title: 'Navbar'
-}
+  title: 'Navbar',
+};
 </script>
 
 <style lang="less" scoped>
@@ -41,4 +41,3 @@ export default {
   background-color: red;
 }
 </style>
-

@@ -20,11 +20,11 @@ export default {
   components: {
     Chart,
     Panel,
-    Navbar
+    Navbar,
   },
 
   mounted() {
-    console.log(this)
+    console.log(this);
     this.updateVariable(1987);
   },
 
@@ -34,12 +34,12 @@ export default {
 
   methods: {
     async updateVariable(value) {
-      console.log(this.$store)
+      console.log(this.$store);
 
       await this.$store.dispatch('changeVariable', value);
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style lang="less">
@@ -66,5 +66,5 @@ body {
     width: 100%;
     height: 90%;
   }
-} 
+}
 </style>

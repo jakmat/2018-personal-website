@@ -5,7 +5,7 @@
 <script>
 export default {
   name: 'Panel',
-}
+};
 </script>
 
 <style lang="less" scoped>
