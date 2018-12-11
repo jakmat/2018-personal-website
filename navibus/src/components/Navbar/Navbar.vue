@@ -9,7 +9,7 @@
         class="navbar__menu--link"
         v-if="tabs.length"
         v-for="tab in tabs"
-        @click="goTo(tab)">
+        @click="goTo(tab.component)">
         <span>{{ tab.title }}</span>
       </li>
     </ul>
@@ -17,42 +17,17 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
+
 export default {
   title: 'Navbar',
 
-  data() {
-    return {
-      activeTab: null,
-      tabs: [
-        {
-          title: 'About Me',
-          component: 'content-about'
-        },
-        {
-          title: 'Projects',
-          component: 'content-projects'
-        },
-        {
-          title: 'Inspirations',
-          component: 'content-inspirations'
-        },
-        {
-          title: 'Maps',
-          component: 'content-maps'
-        },
-        {
-          title: 'Contact',
-          component: 'content-contact'
-        }    
-      ]
-    };
+  computed: {
+    ...mapGetters(['tabs']),
   },
 
   methods: {
-    goTo(tab) {
-      this.activeTab = tab;
-      console.log(this.activeTab);
-    }
+    ...mapActions({ goTo: 'changeActiveContent' }),
   }
 
 };

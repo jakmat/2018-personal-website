@@ -3,7 +3,7 @@
     <navbar />
     <div class="main">
       <panel />
-      <chart />
+      <content />
     </div>
   </div>
 </template>
@@ -11,16 +11,16 @@
 <script>
 import store from 'vuex';
 import Navbar from './components/Navbar/Navbar.vue';
-import Chart from './map/Chart.vue';
 import Panel from './components/Panel/Panel.vue';
+import Content from './components/Content/Content.vue';
 
 export default {
   name: 'App',
 
   components: {
-    Chart,
-    Panel,
     Navbar,
+    Panel,
+    Content,
   },
 
   mounted() {

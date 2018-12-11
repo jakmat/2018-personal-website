@@ -43,8 +43,8 @@ export default {
 <style lang="less" scoped>
 .map {
   // background-color: #202020;
-  width: 80vw;
-  height: 88vh;
+  width: 100%;
+  height: 100%;
 
   #leaflet {
     width: 100%;
