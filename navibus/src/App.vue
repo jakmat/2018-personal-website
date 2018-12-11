@@ -53,6 +53,15 @@ body {
   padding: 0;
   background-color: @background-main;
   color: @font-color-light;
+
+  a {
+    text-decoration: none;
+    color: @font-color-light;
+  }
+
+  ul {
+    list-style-type: none;
+  }
   // font-family: 
 }
 

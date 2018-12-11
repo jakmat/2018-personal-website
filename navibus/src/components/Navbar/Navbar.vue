@@ -11,10 +11,18 @@
         <span  class='icon-bar menu__btn--bar'></span>
     </button> -->
     <ul class="navbar__menu">
-      <li class="navbar__menu--link"><a href="#" class="active">O mnie</a></li>
-      <li class="navbar__menu--link"><a href="#">Projekty</a></li>
-      <li class="navbar__menu--link"><a href="#">Inspiracje</a></li>
-      <li class="navbar__menu--link"><a href="#">Kontakt</a></li>
+      <!-- <li 
+        class="navbar__menu--link"
+        v-if="tabs.length"
+        v-for="tab in tabs"
+        @click="goTo(tab)">
+        {{ tab.title }}
+      </li> -->
+      <li class="navbar__menu--link"><a href="#" class="active">About me</a></li>
+      <li class="navbar__menu--link"><a shref="#">Projects</a></li>
+      <li class="navbar__menu--link"><a href="#">Inspirations</a></li>
+      <li class="navbar__menu--link"><a href="#">Maps</a></li>
+      <li class="navbar__menu--link"><a href="#">Contacts</a></li>
     </ul>
   </div>
 </template>
@@ -27,21 +35,17 @@ export default {
 
 <style lang="less" scoped>
 @import '../../global.less';
+@import '../../mixins.less';
 
 .navbar {
   width: 100vw;
   height: 10%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  .flex(row, space-between, center);
 
   &__title {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
+  padding: 0 12px;
+  .flex(row, space-between, center);
 
     &--logo {
       display: block;
@@ -49,14 +53,27 @@ export default {
     }
 
     &--person {
-      color: @font-color-light;
-      font-size: @font-size-title;
+      font-size: @navbar-title-font-size;
       padding: 0 10px;
     }
   }
 
   &__menu {
-
+    width: 50%;
+    .flex(row, flex-start, center);
+    
+    &--link {
+      font-size: @navbar-link-font-size;
+      background: @navbar-link-background;
+      margin: 0 10px;
+      padding: 5px 10px;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }
 </style>
