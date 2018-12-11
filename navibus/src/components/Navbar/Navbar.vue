@@ -4,25 +4,14 @@
       <img class="navbar__title--logo" src="../../assets/logo2.png" alt="Logo złożone z połączonych liter inicjałów JAKMAT">
       <h1 class="navbar__title--person">Jakub Matusiak</h1>
     </div>
-    <!-- <button type="button" class="navbar__button">
-        <span class="sr-only">Toggle nav</span>
-        <span class='icon-bar menu__btn--bar'></span>
-        <span class='icon-bar menu__btn--bar'></span>
-        <span  class='icon-bar menu__btn--bar'></span>
-    </button> -->
     <ul class="navbar__menu">
-      <!-- <li 
+      <li 
         class="navbar__menu--link"
         v-if="tabs.length"
         v-for="tab in tabs"
         @click="goTo(tab)">
-        {{ tab.title }}
-      </li> -->
-      <li class="navbar__menu--link"><a href="#" class="active">About me</a></li>
-      <li class="navbar__menu--link"><a shref="#">Projects</a></li>
-      <li class="navbar__menu--link"><a href="#">Inspirations</a></li>
-      <li class="navbar__menu--link"><a href="#">Maps</a></li>
-      <li class="navbar__menu--link"><a href="#">Contacts</a></li>
+        <span>{{ tab.title }}</span>
+      </li>
     </ul>
   </div>
 </template>
@@ -30,6 +19,42 @@
 <script>
 export default {
   title: 'Navbar',
+
+  data() {
+    return {
+      activeTab: null,
+      tabs: [
+        {
+          title: 'About Me',
+          component: 'content-about'
+        },
+        {
+          title: 'Projects',
+          component: 'content-projects'
+        },
+        {
+          title: 'Inspirations',
+          component: 'content-inspirations'
+        },
+        {
+          title: 'Maps',
+          component: 'content-maps'
+        },
+        {
+          title: 'Contact',
+          component: 'content-contact'
+        }    
+      ]
+    };
+  },
+
+  methods: {
+    goTo(tab) {
+      this.activeTab = tab;
+      console.log(this.activeTab);
+    }
+  }
+
 };
 </script>
 
@@ -40,11 +65,11 @@ export default {
 .navbar {
   width: 100vw;
   height: 10%;
-  .flex(row, space-between, center);
+  .flex(row, flex-start, center);
 
   &__title {
   display: flex;
-  padding: 0 12px;
+  padding: 0 36px 0 12px;
   .flex(row, space-between, center);
 
     &--logo {
@@ -59,12 +84,15 @@ export default {
   }
 
   &__menu {
-    width: 50%;
+    width: 100%;
     .flex(row, flex-start, center);
     
     &--link {
+      cursor: pointer;
       font-size: @navbar-link-font-size;
       background: @navbar-link-background;
+      text-align: center;
+      width: 100px;
       margin: 0 10px;
       padding: 5px 10px;
       &:first-child {

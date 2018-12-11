@@ -44,7 +44,7 @@ export default {
 .map {
   // background-color: #202020;
   width: 80vw;
-  height: 90vh;
+  height: 88vh;
 
   #leaflet {
     width: 100%;

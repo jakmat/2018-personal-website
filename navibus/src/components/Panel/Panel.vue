@@ -13,7 +13,7 @@ export default {
 .panel {
 // @import '@/global.less';
   // background-color: @panel-background;
-  width: 20vw;
+  width: 19vw;
   height: 100%;
 }
 </style>

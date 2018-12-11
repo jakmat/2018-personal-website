@@ -2,8 +2,8 @@
   <div id="app">
     <navbar />
     <div class="main">
-      <chart />
       <panel />
+      <chart />
     </div>
   </div>
 </template>
