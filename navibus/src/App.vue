@@ -3,7 +3,7 @@
     <navbar />
     <div class="main">
       <panel />
-      <content />
+      <content-root />
     </div>
   </div>
 </template>
@@ -12,7 +12,7 @@
 import store from 'vuex';
 import Navbar from './components/Navbar/Navbar.vue';
 import Panel from './components/Panel/Panel.vue';
-import Content from './components/Content/Content.vue';
+import ContentRoot from './components/Content/ContentRoot.vue';
 
 export default {
   name: 'App',
@@ -20,7 +20,7 @@ export default {
   components: {
     Navbar,
     Panel,
-    Content,
+    ContentRoot,
   },
 
   mounted() {

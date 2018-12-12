@@ -1,12 +1,18 @@
 <template>
   <div class="content__maps">
-    <span>Maps</span>
+    <chart />
   </div>
 </template>
 
 <script>
+import Chart from '../../map/Chart.vue'
+
 export default {
   name: 'ContentMaps',
+ 
+  components: { 
+    Chart 
+  }
 };
 </script>
 
