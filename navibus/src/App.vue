@@ -53,6 +53,7 @@ body {
   padding: 0;
   background-color: @background-main;
   color: @font-color-light;
+  font-family: @font-app;
 
   a {
     text-decoration: none;
