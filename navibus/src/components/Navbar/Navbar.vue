@@ -7,6 +7,10 @@
     <ul class="navbar__menu">
       <li 
         class="navbar__menu--link"
+        :class="{
+          lab: tab.component === 'content-lab',
+          active: tab.component === activeContent 
+        }"
         v-if="tabs.length"
         v-for="tab in tabs"
         @click="goTo(tab.component)">
@@ -23,7 +27,7 @@ export default {
   title: 'Navbar',
 
   computed: {
-    ...mapGetters(['tabs']),
+    ...mapGetters(['tabs', 'lab', 'activeContent']),
   },
 
   methods: {
@@ -70,11 +74,33 @@ export default {
       width: 100px;
       margin: 0 10px;
       padding: 5px 10px;
+      
       &:first-child {
         margin-left: 0;
       }
+      
       &:last-child {
         margin-right: 0;
+      }
+      
+      &.lab {
+        background-color: @navbar-link-background-lab;
+        
+        &:hover {
+          background-color: @navbar-link-background-lab-hover;
+        }
+
+        &.active {
+          background-color: @navbar-link-background-lab-active;
+        }
+      }
+      
+      &:hover {
+        background-color: @navbar-link-background-hover;
+      }
+
+      &.active {
+        background-color: @navbar-link-background-active;
       }
     }
   }

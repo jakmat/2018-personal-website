@@ -1,5 +1,7 @@
 <template>
-  <div class="panel"></div>
+  <div class="panel">
+    <!-- <div class="panel__toggle"></div> -->
+  </div>
 </template>
 
 <script>
@@ -15,5 +17,14 @@ export default {
   // background-color: @panel-background;
   width: 19vw;
   height: 100%;
+
+  &__toggle {
+    position: relative;
+    top: 25vh;
+    left: 19.5vw;
+    height: 30vh;
+    width: 10px;
+    background-color: red;
+  }
 }
 </style>

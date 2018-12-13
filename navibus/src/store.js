@@ -6,9 +6,10 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     variable: 0,
+    lab: true,
     tabs: [
         {
-            title: 'About Me',
+            title: 'Tech Stack',
             component: 'content-about'
         },
         {
@@ -24,8 +25,24 @@ export default new Vuex.Store({
             component: 'content-maps'
         },
         {
+            title: 'Blog',
+            component: 'content-blog',
+            topics: [
+              'Aleksandrów',
+              'Łódź',
+              'Nijmegen',
+              'Borszczów',
+              'angielski / słówka',
+              'niderlandzki / słówka'              
+            ]
+        },
+        {
             title: 'Contact',
             component: 'content-contact'
+        },
+        {
+          title: 'Lab',
+          component: 'content-lab'
         }
     ],
     activeContent: 'content-projects'
@@ -33,6 +50,9 @@ export default new Vuex.Store({
   getters: {
     variable(state) {
       return state.variable;
+    },
+    lab(state) {
+      return state.lab;
     },
     tabs(state) {
       return state.tabs;

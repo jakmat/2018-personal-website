@@ -1,18 +1,19 @@
 <template>
-  <div class="content__about">
-    <span>Tech Stack</span>
+  <div class="content__blog">
+    <span>Blog</span>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ContentAbout',
+  name: 'ContentBlog',
 };
 </script>
 
 <style lang="less" scoped>
-.content__about {
+.content__blog {
   width: 100%;
   height: 100%;  
+  background-color: yellow;
 }
 </style>

@@ -11,6 +11,8 @@ import ContentProjects from './ContentProjects.vue';
 import ContentInspirations from './ContentInspirations.vue';
 import ContentMaps from './ContentMaps.vue';
 import ContentContact from './ContentContact.vue';
+import ContentBlog from './ContentBlog.vue';
+import ContentLab from './ContentLab.vue';
 
 export default {
   name: 'ContentRoot',
@@ -20,7 +22,9 @@ export default {
     ContentProjects,
     ContentInspirations,
     ContentMaps,
-    ContentContact
+    ContentBlog,
+    ContentContact,
+    ContentLab
   },
   
   computed: {
@@ -30,10 +34,12 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import '../../global.less';
+
 .content {
-  width: 80vw;
+  min-width: 80vw;
   height: 88vh;
-  background-color: #fff;
+  background-color: @background-content;
 
 }
 </style>
