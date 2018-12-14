@@ -2,7 +2,8 @@
   <div class="navbar">
     <div class="navbar__title">
       <img class="navbar__title--logo" src="../../assets/logo2.png" alt="Logo złożone z połączonych liter inicjałów JAKMAT">
-      <h1 class="navbar__title--person">Jakub Matusiak</h1>
+      <span class="navbar__title--focus">WEB DEV</span>
+      <h1 class="navbar__title--person">Personal page of Jakub Matusiak, map-oriented Frontend Developer</h1>
     </div>
     <ul class="navbar__menu">
       <li 
@@ -48,17 +49,26 @@ export default {
 
   &__title {
   display: flex;
-  padding: 0 36px 0 12px;
+  padding-left: 12px;
   .flex(row, space-between, center);
 
     &--logo {
       display: block;
       height: 50px;
+      opacity: 0.8;
+    }
+
+    &--focus {
+      width: 50px;
+      // color: #fff;
+      font-size: @navbar-title-font-size;
+      font-weight: 300;
     }
 
     &--person {
-      font-size: @navbar-title-font-size;
-      padding: 0 10px;
+      width: 160px;
+      font-size: 10px;
+      padding-left: 12px;
     }
   }
 
