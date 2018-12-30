@@ -1,18 +1,172 @@
-2011-17, www.emapi.pl, Emapa/Cartall, photointerpreting and digital cartography, [GIS, SQL] 
-2015, www.mojasoja.pl, freelance, MOJA SOJA, own web store, [Prestashop, HTML, CSS]
-2016, www.retkiniakebab.pl, freelance, Retkiński Kebab, landing page, [HTML, CSS]
-2017, www.jakmat.pl/bookstore, excercise, Bookstore, excercise app, [HTML, CSS, JavaScript, AngularJS, Bootstrap]
-2017, www.opakowania-wof.pl, freelance, Wyrób Opakowań Foliowych, foil package factory website [HTML, CSS, JavaScript]
-2017, Windows Form App, excercise, Przeglądarka Obiektów Chronionych, [.NET, C#, SQL, Oracle Data Modeller]
-2017, www.jakmat.pl/solar, freelance, Solar System Simulator, [HTML, CSS, JavaScipt]
-2017, www.magdaskibka.pl, freelance, Magda Skibka - PR Consulting, landing page, [HTML, CSS, JavaScript, PHP]
-2017, www.beton...., Polcode, Construction Site App, Q&A
-2017, Internal Training, Polcode, Recipe Book, ..., [HTML, CSS, TypeScript, Angular 2, Bootstrap]
-2017, www.mikewall.com, Polcode, Volleyball Coaching App, subpages, [HTML, CSS, Sass, Blade]
-2017, Internal Feature, Polcode, Calendar snippet, ..., [HTML, CSS, TypeScript, Angular 4]
-2018, www.lautrechili.com, Polcode, [HTML, CSS, Sass, JavaScript, ...]
-2018, Internal Web App, Polcode, Schooling App for Polcode developrs, real-time success/failure reporter for training tasks, [HTML, CSS, TypeScript, Angular 5, Bootstrap 4]
-2018, www.skydiving..., Polcode,
-2018, www.plndesigngroup.pl, freelance, PLN Design Group [Wordpress, HTML, CSS, JavaScript]
-2018, Leica Conx UI, Hexagon Geosystems  
-2018,
+[
+    {
+        "start": 2011,
+        "end": 2017,
+        "url": "www.emapi.pl",
+        "role": "employee",
+        "company": "Emapa/Cartall",
+        "title": "Emapi",
+        "description": "photointerpreting and digital cartography",
+        "stack": ["GIS","SQL"]
+    },
+    {
+        "start": 2014,
+        "end": 2017,
+        "url": "www.mojasoja.pl",
+        "role": "freelance",
+        "company": "MOJA SOJA",
+        "title": "Sojowirówka - Soybean Milk Maker",
+        "description": "own-branded home appliance business, e-commerce",
+        "stack": ["Prestashop","HTML","CSS"]
+    },
+    {
+        "start": 2016,
+        "end": "",
+        "url": "www.retkiniakebab.pl",
+        "role": "freelance",
+        "company": "Retkiński Kebab",
+        "title": "landing page",
+        "description": "",
+        "stack": ["HTML","CSS"]
+    },
+    {
+        "start": 2017,
+        "end": "",
+        "url": "www.jakmat.pl/bookstore",
+        "role": "exercise",
+        "company": "",
+        "title": "Bookstore",
+        "description": "excercise app",
+        "stack": ["HTML","CSS","JavaScript","AngularJS","Bootstrap"]
+    },
+    {
+        "start": 2017,
+        "end": "",
+        "url": "www.opakowania-wof.pl",
+        "role": "freelance",
+        "company": "Wyrób Opakowań Foliowych",
+        "title": "",
+        "description": "landing page foil package factory website",
+        "stack": ["HTML","CSS","JavaScript"]
+    },
+    {
+        "start": 2017,
+        "end": "",
+        "url": "Windows Form App",
+        "role": "excercise",
+        "company": "UŁ WMiF",
+        "title": "Przeglądarka Obiektów Chronionych",
+        "description": "",
+        "stack": [".NET","C#","SQL","Oracle Data Modeller"]
+    },
+    {
+        "start": 2017,
+        "end": "",
+        "url": "www.jakmat.pl/solar",
+        "role": "freelance",
+        "company": "",
+        "title": "Solar System Simulator",
+        "description": "",
+        "stack": ["HTML","CSS","JavaScipt"]
+    },
+    {
+        "start": 2017,
+        "end": "",
+        "url": "www.magdaskibka.pl",
+        "role": "freelance",
+        "company": "Magdalena Skibka PR Consulting",
+        "title": "Magda Skibka - PR Consulting",
+        "description": "landing page",
+        "stack": ["HTML","CSS","JavaScript","PHP"]
+    },
+    {
+        "start": 2017,
+        "end": "",
+        "url": "www.beton....",
+        "role": "employee",
+        "company": "Polcode",
+        "title": "Construction Site App",
+        "description": "Q&A",
+        "stack": ["HTML","CSS","JavaScript"]
+    },
+    {
+        "start": 2017,
+        "end": "",
+        "url": "Internal Training",
+        "role": "employee",
+        "company": "Polcode",
+        "title": "Recipe Book app",
+        "description": "",
+        "stack": ["HTML","CSS","TypeScript","Angular 2","Bootstrap"]
+    },
+    {
+        "start": 2017,
+        "end": "",
+        "url": "www.mikewall.com",
+        "role": "employee",
+        "company": "Polcode",
+        "title": "Volleyball Coaching App",
+        "description": "subpages",
+        "stack": ["HTML","CSS","Sass","Blade"]
+    },
+    {
+        "start": 2017,
+        "end": "",
+        "url": "Internal Feature",
+        "role": "employee",
+        "company": "Polcode",
+        "title": "Calendar snippet",
+        "description": "",
+        "stack": ["HTML","CSS","TypeScript","Angular 4"]
+    },
+    {
+        "start": 2018,
+        "end": "",
+        "url": "www.lautrechili.com",
+        "role": "employee",
+        "company": "Polcode",
+        "title": "",
+        "description": "",
+        "stack": ["HTML","CSS","Sass","JavaScript","Google Maps API"]
+    },
+    {
+        "start": 2018,
+        "end": "",
+        "url": "Internal Web App",
+        "role": "employee",
+        "company": "Polcode",
+        "title": "Internal Training App",
+        "description": "real-time success/failure reporter for training tasks",
+        "stack": ["HTML","CSS","TypeScript","Angular 5","Bootstrap 4"]
+    },
+    {
+        "start": 2018,
+        "end": "",
+        "url": "www.skydiving...",
+        "role": "employee",
+        "company": "Polcode",
+        "title": "",
+        "description": "",
+        "stack": ["Krita"]
+    },
+    {
+        "start": 2018,
+        "end": "",
+        "url": "www.plndesigngroup.pl",
+        "role": "freelance",
+        "company": "PLN Design Group",
+        "title": "",
+        "description": "",
+        "stack": ["Wordpress","HTML","CSS","JavaScript"]
+    },
+    {
+        "start": 2018,
+        "end": "present",
+        "url": "Leica ConX",
+        "role": "employee",
+        "company": "Leica part of Hexagon Geosystems",
+        "title": "",
+        "description": "",
+        "stack": ["HTML","CSS","LESS","JavaScript","Vue.js","Cesium.js","Vuetify"]
+    }
+]

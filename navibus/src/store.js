@@ -12,10 +12,10 @@ export default new Vuex.Store({
             title: 'Tech Stack',
             component: 'content-about'
         },
-        // {
-        //     title: 'Projects',
-        //     component: 'content-projects'
-        // },
+        {
+            title: 'Projects',
+            component: 'content-projects'
+        },
         // {
         //     title: 'Inspirations',
         //     component: 'content-inspirations'
