@@ -40,6 +40,6 @@ export default {
   min-width: 80vw;
   height: 88vh;
   background-color: @background-content;
-
+  overflow-y: scroll;
 }
 </style>

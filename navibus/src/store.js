@@ -12,34 +12,34 @@ export default new Vuex.Store({
             title: 'Tech Stack',
             component: 'content-about'
         },
-        {
-            title: 'Projects',
-            component: 'content-projects'
-        },
-        {
-            title: 'Inspirations',
-            component: 'content-inspirations'
-        },
-        {
-            title: 'Maps',
-            component: 'content-maps'
-        },
-        {
-            title: 'Blog',
-            component: 'content-blog',
-            topics: [
-              'Aleksandrów',
-              'Łódź',
-              'Nijmegen',
-              'Borszczów',
-              'angielski / słówka',
-              'niderlandzki / słówka'              
-            ]
-        },
-        {
-            title: 'Contact',
-            component: 'content-contact'
-        },
+        // {
+        //     title: 'Projects',
+        //     component: 'content-projects'
+        // },
+        // {
+        //     title: 'Inspirations',
+        //     component: 'content-inspirations'
+        // },
+        // {
+        //     title: 'Maps',
+        //     component: 'content-maps'
+        // },
+        // {
+        //     title: 'Blog',
+        //     component: 'content-blog',
+        //     topics: [
+        //       'Aleksandrów',
+        //       'Łódź',
+        //       'Nijmegen',
+        //       'Borszczów',
+        //       'angielski / słówka',
+        //       'niderlandzki / słówka'              
+        //     ]
+        // },
+        // {
+        //     title: 'Contact',
+        //     component: 'content-contact'
+        // },
         {
           title: 'Lab',
           component: 'content-lab'
