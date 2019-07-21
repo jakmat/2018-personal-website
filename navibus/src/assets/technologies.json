@@ -1,0 +1,356 @@
+[
+  {
+    "id": 1,
+    "rank": "",
+    "name": "HTML",
+    "level": 5
+  },
+  {
+    "id": 2,
+    "rank": "",
+    "name": "CSS",
+    "level": 5
+  },
+  {
+    "id": 3,
+    "rank": "",
+    "name": "JavaScript",
+    "level": 5
+  },
+  {
+    "id": 4,
+    "rank": "",
+    "name": "Vue.js",
+    "level": 5
+  },
+  {
+    "id": 5,
+    "rank": "",
+    "name": "React.js",
+    "level": 2
+  },
+  {
+    "id": 6,
+    "rank": "",
+    "name": "Angular",
+    "level": 3
+  },
+  {
+    "id": 7,
+    "rank": "",
+    "name": "Cesium.js",
+    "level": 5
+  },
+  {
+    "id": 8,
+    "rank": "",
+    "name": "Leaflet.js",
+    "level": 2
+  },
+  {
+    "id": 9,
+    "rank": "",
+    "name": "Moment.js",
+    "level": 4
+  },
+  {
+    "id": 10,
+    "rank": "",
+    "name": "Lodash",
+    "level": 5
+  },
+  {
+    "id": 11,
+    "rank": "",
+    "name": "ES6",
+    "level": 5
+  },
+  {
+    "id": 12,
+    "rank": "",
+    "name": "Sass",
+    "level": 3
+  },
+  {
+    "id": 13,
+    "rank": "",
+    "name": "Less",
+    "level": 5
+  },
+  {
+    "id": 14,
+    "rank": "ķ",
+    "name": "Git",
+    "level": 5
+  },
+  {
+    "id": 15,
+    "rank": "",
+    "name": "Webpack",
+    "level": 5
+  },
+  {
+    "id": 16,
+    "rank": "",
+    "name": "npm",
+    "level": 5
+  },
+  {
+    "id": 17,
+    "rank": "",
+    "name": "Jira",
+    "level": 5
+  },
+  {
+    "id": 18,
+    "rank": "",
+    "name": "Confluence",
+    "level": 5
+  },
+  {
+    "id": 19,
+    "rank": "",
+    "name": "PHP",
+    "level": 2
+  },
+  {
+    "id": 20,
+    "rank": "",
+    "name": "Blade",
+    "level": 2
+  },
+  {
+    "id": 21,
+    "rank": "",
+    "name": "Twigg",
+    "level": 2
+  },
+  {
+    "id": 22,
+    "rank": "",
+    "name": "TypeScript",
+    "level": 3
+  },
+  {
+    "id": 23,
+    "rank": "",
+    "name": "Bootstrap",
+    "level": 3
+  },
+  {
+    "id": 24,
+    "rank": "",
+    "name": "Material Design",
+    "level": 5
+  },
+  {
+    "id": 25,
+    "rank": "",
+    "name": "SemanticUI",
+    "level": 3
+  },
+  {
+    "id": 26,
+    "rank": "",
+    "name": "Google Maps API",
+    "level": 2
+  },
+  {
+    "id": 27,
+    "rank": "",
+    "name": "SQL",
+    "level": 3
+  },
+  {
+    "id": 28,
+    "rank": "",
+    "name": "Prestashop",
+    "level": 3
+  },
+  {
+    "id": 29,
+    "rank": "",
+    "name": "Wordpress",
+    "level": 4
+  },
+  {
+    "id": 30,
+    "rank": "",
+    "name": "Oracle Data Modeller",
+    "level": 2
+  },
+  {
+    "id": 31,
+    "rank": "",
+    "name": "Oracle Data Developer",
+    "level": 2
+  },
+  {
+    "id": 32,
+    "rank": "",
+    "name": "MapInfo",
+    "level": 3
+  },
+  {
+    "id": 33,
+    "rank": "",
+    "name": "ArcGIS",
+    "level": 2
+  },
+  {
+    "id": 34,
+    "rank": "",
+    "name": "QuantumGIS",
+    "level": 2
+  },
+  {
+    "id": 35,
+    "rank": "",
+    "name": "Krita",
+    "level": 3
+  },
+  {
+    "id": 36,
+    "rank": "",
+    "name": "Inkscape",
+    "level": 2
+  },
+  {
+    "id": 37,
+    "rank": "",
+    "name": "Photoshop",
+    "level": 3
+  },
+  {
+    "id": 38,
+    "rank": "",
+    "name": "3D Studio Max",
+    "level": 2
+  },
+  {
+    "id": 39,
+    "rank": "",
+    "name": "Corel Draw",
+    "level": 3
+  },
+  {
+    "id": 40,
+    "rank": "",
+    "name": "AutoCAD",
+    "level": 2
+  },
+  {
+    "id": 41,
+    "rank": "",
+    "name": "Linux",
+    "level": 5
+  },
+  {
+    "id": 42,
+    "rank": "",
+    "name": "Bash",
+    "level": 5
+  },
+  {
+    "id": 43,
+    "rank": "",
+    "name": "Blender",
+    "level": 1
+  },
+  {
+    "id": 44,
+    "rank": "",
+    "name": "Vuetify",
+    "level": 4
+  },
+  {
+    "id": 45,
+    "rank": "",
+    "name": "Eslint",
+    "level": 5
+  },
+  {
+    "id": 46,
+    "rank": "",
+    "name": "Vuex",
+    "level": 5
+  },
+  {
+    "id": 47,
+    "rank": "",
+    "name": "d3.js",
+    "level": 1
+  },
+  {
+    "id": 48,
+    "rank": "",
+    "name": "AngularJS",
+    "level": 2
+  },
+  {
+    "id": 49,
+    "rank": "",
+    "name": "BEM",
+    "level": 5
+  },
+  {
+    "id": 50,
+    "rank": "",
+    "name": "Python",
+    "level": 1
+  },
+  {
+    "id": 51,
+    "rank": "",
+    "name": "jQuery",
+    "level": 2
+  },
+  {
+    "id": 52,
+    "rank": "",
+    "name": "CSS Flexbox",
+    "level": 5
+  },
+  {
+    "id": 53,
+    "rank": "",
+    "name": "CSS Grid",
+    "level": 2
+  },
+  {
+    "id": 54,
+    "rank": "",
+    "name": "SVG",
+    "level": 4
+  },
+  {
+    "id": 55,
+    "rank": "",
+    "name": "JSON",
+    "level": 5
+  },
+  {
+    "id": 56,
+    "rank": "",
+    "name": "Axios",
+    "level": 2
+  },
+  {
+    "id": 57,
+    "rank": "",
+    "name": "REST",
+    "level": 5
+  },
+  {
+    "id": 58,
+    "rank": "",
+    "name": "RWD",
+    "level": 4
+  },
+  {
+    "id": 59,
+    "rank": "",
+    "name": "Postman",
+    "level": 2
+  }
+]

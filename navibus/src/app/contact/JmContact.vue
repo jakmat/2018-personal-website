@@ -1,19 +1,18 @@
 <template>
-  <div class="content__blog">
-    <span>Blog</span>
+  <div class="jm-contact">
+    <span>Contact</span>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ContentBlog',
+  name: 'JmContact',
 };
 </script>
 
 <style lang="less" scoped>
-.content__blog {
+.jm-contact {
   width: 100%;
   height: 100%;  
-  background-color: yellow;
 }
 </style>

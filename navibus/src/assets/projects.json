@@ -1,172 +1,200 @@
 [
-    {
-        "start": 2011,
-        "end": 2017,
-        "url": "www.emapi.pl",
-        "role": "employee",
-        "company": "Emapa/Cartall",
-        "title": "Emapi",
-        "description": "photointerpreting and digital cartography",
-        "stack": ["GIS","SQL"]
-    },
-    {
-        "start": 2014,
-        "end": 2017,
-        "url": "www.mojasoja.pl",
-        "role": "freelance",
-        "company": "MOJA SOJA",
-        "title": "Sojowirówka - Soybean Milk Maker",
-        "description": "own-branded home appliance business, e-commerce",
-        "stack": ["Prestashop","HTML","CSS"]
-    },
-    {
-        "start": 2016,
-        "end": "",
-        "url": "www.retkiniakebab.pl",
-        "role": "freelance",
-        "company": "Retkiński Kebab",
-        "title": "landing page",
-        "description": "",
-        "stack": ["HTML","CSS"]
-    },
-    {
-        "start": 2017,
-        "end": "",
-        "url": "www.jakmat.pl/bookstore",
-        "role": "exercise",
-        "company": "",
-        "title": "Bookstore",
-        "description": "excercise app",
-        "stack": ["HTML","CSS","JavaScript","AngularJS","Bootstrap"]
-    },
-    {
-        "start": 2017,
-        "end": "",
-        "url": "www.opakowania-wof.pl",
-        "role": "freelance",
-        "company": "Wyrób Opakowań Foliowych",
-        "title": "",
-        "description": "landing page foil package factory website",
-        "stack": ["HTML","CSS","JavaScript"]
-    },
-    {
-        "start": 2017,
-        "end": "",
-        "url": "Windows Form App",
-        "role": "excercise",
-        "company": "UŁ WMiF",
-        "title": "Przeglądarka Obiektów Chronionych",
-        "description": "",
-        "stack": [".NET","C#","SQL","Oracle Data Modeller"]
-    },
-    {
-        "start": 2017,
-        "end": "",
-        "url": "www.jakmat.pl/solar",
-        "role": "freelance",
-        "company": "",
-        "title": "Solar System Simulator",
-        "description": "",
-        "stack": ["HTML","CSS","JavaScipt"]
-    },
-    {
-        "start": 2017,
-        "end": "",
-        "url": "www.magdaskibka.pl",
-        "role": "freelance",
-        "company": "Magdalena Skibka PR Consulting",
-        "title": "Magda Skibka - PR Consulting",
-        "description": "landing page",
-        "stack": ["HTML","CSS","JavaScript","PHP"]
-    },
-    {
-        "start": 2017,
-        "end": "",
-        "url": "www.beton....",
-        "role": "employee",
-        "company": "Polcode",
-        "title": "Construction Site App",
-        "description": "Q&A",
-        "stack": ["HTML","CSS","JavaScript"]
-    },
-    {
-        "start": 2017,
-        "end": "",
-        "url": "Internal Training",
-        "role": "employee",
-        "company": "Polcode",
-        "title": "Recipe Book app",
-        "description": "",
-        "stack": ["HTML","CSS","TypeScript","Angular 2","Bootstrap"]
-    },
-    {
-        "start": 2017,
-        "end": "",
-        "url": "www.mikewall.com",
-        "role": "employee",
-        "company": "Polcode",
-        "title": "Volleyball Coaching App",
-        "description": "subpages",
-        "stack": ["HTML","CSS","Sass","Blade"]
-    },
-    {
-        "start": 2017,
-        "end": "",
-        "url": "Internal Feature",
-        "role": "employee",
-        "company": "Polcode",
-        "title": "Calendar snippet",
-        "description": "",
-        "stack": ["HTML","CSS","TypeScript","Angular 4"]
-    },
-    {
-        "start": 2018,
-        "end": "",
-        "url": "www.lautrechili.com",
-        "role": "employee",
-        "company": "Polcode",
-        "title": "",
-        "description": "",
-        "stack": ["HTML","CSS","Sass","JavaScript","Google Maps API"]
-    },
-    {
-        "start": 2018,
-        "end": "",
-        "url": "Internal Web App",
-        "role": "employee",
-        "company": "Polcode",
-        "title": "Internal Training App",
-        "description": "real-time success/failure reporter for training tasks",
-        "stack": ["HTML","CSS","TypeScript","Angular 5","Bootstrap 4"]
-    },
-    {
-        "start": 2018,
-        "end": "",
-        "url": "www.skydiving...",
-        "role": "employee",
-        "company": "Polcode",
-        "title": "",
-        "description": "",
-        "stack": ["Krita"]
-    },
-    {
-        "start": 2018,
-        "end": "",
-        "url": "www.plndesigngroup.pl",
-        "role": "freelance",
-        "company": "PLN Design Group",
-        "title": "",
-        "description": "",
-        "stack": ["Wordpress","HTML","CSS","JavaScript"]
-    },
-    {
-        "start": 2018,
-        "end": "present",
-        "url": "Leica ConX",
-        "role": "employee",
-        "company": "Leica part of Hexagon Geosystems",
-        "title": "",
-        "description": "",
-        "stack": ["HTML","CSS","LESS","JavaScript","Vue.js","Cesium.js","Vuetify"]
-    }
+  {
+    "start": "2018-06",
+    "end": "",
+    "url": "www.leica-geosystems.com/services-and-support/workflow-services/leica-conx",
+    "role": "employee",
+    "job": "Frontend Developer",
+    "company": "Leica Geosystems (part of Hexagon)",
+    "project": "Leica ConX",
+    "description": "programming UI components, filters and 3D map for visualising construcion site machines, reference models and constructed data in real time",
+    "stack": "HTML,CSS,LESS,JavaScript,Vue.js,Cesium.js"
+  },
+  {
+    "start": "2018-03",
+    "end": "2018-04",
+    "url": "www.lautre-chili.fr",
+    "role": "employee",
+    "job": "Frontend Developer",
+    "company": "Polcode",
+    "project": "L'Autre Chilli",
+    "description": "structuring and styling subpages for South America travellers",
+    "stack": "HTML,CSS,Sass,JavaScript,Google Maps API"
+  },
+  {
+    "start": "2018-01",
+    "end": "2018-02",
+    "url": "",
+    "role": "employee",
+    "job": "Frontend Developer",
+    "company": "Polcode",
+    "project": "Calendar with Events",
+    "description": "reusable feature for multiple apps",
+    "stack": "HTML,CSS,TypeScript,Angular"
+  },
+  {
+    "start": "2018-01",
+    "end": "2018-04",
+    "url": "",
+    "role": "employee",
+    "job": "Frontend Developer",
+    "company": "Polcode",
+    "project": "Internal Training App",
+    "description": "internal training app for developers in real time",
+    "stack": "HTML,CSS,TypeScript,Angular,Bootstrap"
+  },
+  {
+    "start": "2017-12",
+    "end": "2018-01",
+    "url": "www.goldmedalsquared.com",
+    "role": "employee",
+    "job": "Frontend Developer",
+    "company": "Polcode",
+    "project": "Gold Medal Squared",
+    "description": "structuring and styling subpages for voleyball coaching app",
+    "stack": "HTML,CSS,Sass,Blade"
+  },
+  {
+    "start": "2017-11",
+    "end": "2017-12",
+    "url": "",
+    "role": "employee",
+    "job": "Frontend Developer",
+    "company": "Polcode",
+    "project": "Recipe Book app",
+    "description": "introductory training app",
+    "stack": "HTML,CSS,TypeScript,Angular,Bootstrap"
+  },
+  {
+    "start": "2017-10",
+    "end": "2017-10",
+    "url": "www.jakmat.ayz.pl/solar",
+    "role": "exercise",
+    "job": "Entrepreneur / Frontend Developer",
+    "company": "MOJA SOJA",
+    "project": "Solar System Simulator",
+    "description": "small project in Vanilla JS",
+    "stack": "HTML,CSS,JavaScipt"
+  },
+  {
+    "start": "2017-09",
+    "end": "2017-09",
+    "url": "www.magdaskibka.pl",
+    "role": "freelance",
+    "job": "Entrepreneur / Frontend Developer",
+    "company": "MOJA SOJA",
+    "project": "Magdalena Skibka PR Consulting",
+    "description": "landing page for a PR agency managing director",
+    "stack": "HTML,CSS,JavaScript,PHP"
+  },
+  {
+    "start": "2017-05",
+    "end": "2017-06",
+    "url": "",
+    "role": "student",
+    "job": "Student / Frontend Developer",
+    "company": "University of Lodz, Faculty of Maths and IT",
+    "project": "Protected Nature and Monument Browser",
+    "description": "project for Object Oriented Programming and Databases subjects",
+    "stack": "C#,SQL,Oracle Data Modeller,Oracle Data Developer"
+  },
+  {
+    "start": "2017-04",
+    "end": "2017-04",
+    "url": "www.opakowania-wof.pl",
+    "role": "freelance",
+    "job": "Entrepreneur / Frontend Developer",
+    "company": "MOJA SOJA",
+    "project": "Wyrób Opakowań Foliowych",
+    "description": "landing page for a local packaging foil factory",
+    "stack": "HTML,CSS,JavaScript"
+  },
+  {
+    "start": "2017-03",
+    "end": "2017-03",
+    "url": "www.jakmat.ayz.pl/bookstore",
+    "role": "freelance",
+    "job": "Entrepreneur / Frontend Developer",
+    "company": "MOJA SOJA",
+    "project": "Bookstore",
+    "description": "small project in AngularJS and Twitter Bootstrap",
+    "stack": "HTML,CSS,JavaScript,AngularJS,Bootstrap"
+  },
+  {
+    "start": "2016-07",
+    "end": "2016-07",
+    "url": "www.jakmat.ayz.pl/kebab",
+    "role": "freelance",
+    "job": "Entrepreneur / Frontend Developer",
+    "company": "MOJA SOJA",
+    "project": "Retkiński Kebab",
+    "description": "landing page for a local Pakistani restaurant",
+    "stack": "HTML,CSS"
+  },
+  {
+    "start": "2014-09",
+    "end": "2017-09",
+    "url": "https://web.archive.org/web/20170927161029/http://www.mojasoja.pl/",
+    "role": "freelance",
+    "job": "Entrepreneur / Frontend Developer",
+    "company": "MOJA SOJA",
+    "project": "Sojowirówka MOJA SOJA",
+    "description": "own-branded soybean milk maker home appliance e-commerce, web development",
+    "stack": "HTML,CSS,Prestashop"
+  },
+  {
+    "start": "2011-11",
+    "end": "2017-10",
+    "url": "www.emapi.pl",
+    "role": "employee",
+    "job": "GIS Cartographer",
+    "company": "Emapa",
+    "project": "Emapi",
+    "description": "photointerpreting, digital cartography for tourists and car GPS, data transforming and processing",
+    "stack": "GIS,SQL,CSV,JSON"
+  },
+  {
+    "start": "2010-09",
+    "end": "2011-06",
+    "url": "",
+    "role": "student",
+    "job": "Student",
+    "company": "Radboud University Nijmegen",
+    "project": "spatial planning",
+    "description": "Erasmus scholarship",
+    "stack": "GIS,SQL"
+  },
+  {
+    "start": "2009-09",
+    "end": "2009-09",
+    "url": "",
+    "role": "trainee",
+    "job": "Trainee",
+    "company": "Lodz City Hall",
+    "project": "urban cadastre, geodesy and cartography",
+    "description": "querying and updating city cadaster database",
+    "stack": "GIS,SQL"
+  },
+  {
+    "start": "2009-09",
+    "end": "2012-10",
+    "url": "",
+    "role": "student",
+    "job": "Student",
+    "company": "University of Lodz",
+    "project": "geography & spatial planning",
+    "description": "MA degree",
+    "stack": "GIS,SQL"
+  },
+  {
+    "start": "2006-10",
+    "end": "2009-06",
+    "url": "",
+    "role": "student",
+    "job": "Student",
+    "company": "University of Lodz",
+    "project": "geography",
+    "description": "BA degree",
+    "stack": "GIS,SQL"
+  }
 ]

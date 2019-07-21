@@ -1,30 +1,29 @@
 <template>
-  <div id="app">
-    <navbar />
-    <div class="main">
-      <panel />
-      <content-root />
+  <div id="jm-app">
+    <jm-header />
+    <div class="jm-main">
+      <jm-menu />
+      <jm-content />
     </div>
   </div>
 </template>
 
 <script>
 import store from 'vuex';
-import Navbar from './components/Navbar/Navbar.vue';
-import Panel from './components/Panel/Panel.vue';
-import ContentRoot from './components/Content/ContentRoot.vue';
+import JmHeader from './app/shell/JmHeader.vue';
+import JmMenu from './app/shell/JmMenu.vue';
+import JmContent from './app/shell/JmContent.vue';
 
 export default {
-  name: 'App',
+  name: 'JmApp',
 
   components: {
-    Navbar,
-    Panel,
-    ContentRoot,
+    JmHeader,
+    JmMenu,
+    JmContent,
   },
 
   mounted() {
-    console.log(this);
     this.updateVariable(1987);
   },
 
@@ -66,13 +65,13 @@ body {
   // font-family: 
 }
 
-#app {
+#jm-app {
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
 
-  .main {
+  .jm-main {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;

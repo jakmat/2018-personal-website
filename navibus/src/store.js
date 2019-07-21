@@ -10,23 +10,23 @@ export default new Vuex.Store({
     tabs: [
         {
             title: 'Tech Stack',
-            component: 'content-about'
+            component: 'jm-about'
         },
         {
             title: 'Projects',
-            component: 'content-projects'
+            component: 'jm-projects'
         },
         // {
         //     title: 'Inspirations',
-        //     component: 'content-inspirations'
+        //     component: 'jm-inspirations'
         // },
         // {
         //     title: 'Maps',
-        //     component: 'content-maps'
+        //     component: 'jm-maps'
         // },
         // {
         //     title: 'Blog',
-        //     component: 'content-blog',
+        //     component: 'jm-blog',
         //     topics: [
         //       'Aleksandrów',
         //       'Łódź',
@@ -38,14 +38,67 @@ export default new Vuex.Store({
         // },
         // {
         //     title: 'Contact',
-        //     component: 'content-contact'
+        //     component: 'jm-contact'
         // },
         {
           title: 'Lab',
-          component: 'content-lab'
+          component: 'jm-lab'
         }
     ],
-    activeContent: 'content-projects'
+    activeContent: 'jm-projects',
+    lines: [
+      {
+        id: '1',
+        name: 'Doły - Chojny',
+        isSelected: false
+      },
+      {
+        id: '2',
+        name: 'Teofilów - Dąbrowa',
+        isSelected: false
+      },
+      {
+        id: '3',
+        name: 'Marysin - Augustów',
+        isSelected: false
+      },
+      {
+        id: '4',
+        name: 'Helenówek - Dąbrpwa',
+        isSelected: false
+      },
+      {
+        id: '5',
+        name: 'Żabieniec - Kurczaki',
+        isSelected: false
+      },
+      {
+        id: '6',
+        name: 'Doły - Kurczaki',
+        isSelected: false
+      },
+      {
+        id: '7',
+        name: 'Koziny - Niższa',
+        isSelected: false
+      },
+      {
+        id: '8',
+        name: 'Kochanówka - Lodowa',
+        isSelected: false
+      },
+      {
+        id: '9',
+        name: 'Olechów - Zdrowie',
+        isSelected: false
+      },
+      {
+        id: '10',
+        name: 'Olechów - Retkinia',
+        isSelected: false
+      },
+    ],
+    selectedLines: []
   },
   getters: {
     variable(state) {
@@ -59,6 +112,9 @@ export default new Vuex.Store({
     },
     activeContent(state) {
       return state.activeContent;
+    },
+    lines(state) {
+      return state.lines;
     }
   },
   mutations: {
@@ -68,6 +124,11 @@ export default new Vuex.Store({
     setActiveContent(state, payload) {
       state.activeContent = payload;
       console.log('Active content:', state.activeContent);
+    },
+    changeSelectedLines(state, payload) {
+      state.selectedLines = [...payload];
+      console.clear();
+      console.log('selected lines:', state.selectedLines);
     }
   },
   actions: {

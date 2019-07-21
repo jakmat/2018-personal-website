@@ -1,70 +1,29 @@
 <template>
   <div class="root">
-    <jakmat-chips v-model="lines"/>
+    <jakmat-multiselect v-model="data" :input="onSelection"/>
+    <!-- <jakmat-treeview v-model="data" :input="onSelection"/> -->
   </div>
 </template>
 
 <script>
-import JakmatChips from './JakmatChips';
+import JakmatMultiselect from './JakmatMultiselect';
 
 export default {
   name: 'JakmatData',
 
   components: {
-    JakmatChips
+    JakmatMultiselect
   },
 
-  data() {
-    return {
-         lines: [
-             {
-                 id: '1',
-                 name: 'Doły - Chojny',
-                 isSelected: false
-             },
-             {
-                 id: '2',
-                 name: 'Teofilów - Dąbrowa',
-                 isSelected: false
-             },
-             {
-                 id: '3',
-                 name: 'Marysin - Augustów',
-                 isSelected: false
-             },
-             {
-                 id: '4',
-                 name: 'Helenówek - Dąbrpwa',
-                 isSelected: false
-             },
-             {
-                 id: '5',
-                 name: 'Żabieniec - Kurczaki',
-                 isSelected: false
-             },
-             {
-                 id: '6',
-                 name: 'Doły - Kurczaki',
-                 isSelected: false
-             },
-             {
-                 id: '7',
-                 name: 'Koziny - Niższa',
-                 isSelected: false
-             },
-             {
-                 id: '8',
-                 name: 'Kochanówka - Lodowa',
-                 isSelected: false
-             },
-             {
-                 id: '9',
-                 name: 'Olechów - Zdrowie',
-                 isSelected: false
-             },
+  props: {
+    data: Array,
+    input: Function
+  },
 
-         ]
-    };
+  methods: {
+    onSelection(items) {
+        this.input(items.filter(i => i.isSelected));
+    }
   }
 };
 </script>

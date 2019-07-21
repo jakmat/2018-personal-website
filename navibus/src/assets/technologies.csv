@@ -1,0 +1,60 @@
+id,rank,name,level
+1,,HTML,5
+2,,CSS,5
+3,,JavaScript,5
+4,,Vue.js,5
+5,,React.js,2
+6,,Angular,3
+7,,Cesium.js,5
+8,,Leaflet.js,2
+9,,Moment.js,4
+10,,Lodash,5
+11,,ES6,5
+12,,Sass,3
+13,,Less,5
+14,ķ,Git,5
+15,,Webpack,5
+16,,npm,5
+17,,Jira,5
+18,,Confluence,5
+19,,PHP,2
+20,,Blade,1
+21,,Twigg,1
+22,,TypeScript,3
+23,,Bootstrap,3
+24,,Material Design,5
+25,,SemanticUI,3
+26,,Google Maps API,2
+27,,SQL,3
+28,,Prestashop,3
+29,,Wordpress,4
+30,,Oracle Data Modeller,2
+31,,Oracle Data Developer,2
+32,,MapInfo,3
+33,,ArcGIS,2
+34,,QuantumGIS,2
+35,,Krita,3
+36,,Inkscape,2
+37,,Photoshop,3
+38,,3D Studio Max,2
+39,,Corel Draw,3
+40,,AutoCAD,2
+41,,Linux,5
+42,,Bash,5
+43,,Blender,1
+44,,Vuetify,4
+45,,Eslint,5
+46,,Vuex,5
+47,,d3.js,1
+48,,AngularJS,2
+49,,BEM,5
+50,,Python,1
+51,,jQuery,2
+52,,CSS Flexbox,5
+53,,CSS Grid,2
+54,,SVG,4
+55,,JSON,5
+56,,Axios,2
+57,,REST,5
+58,,RWD,4
+59,,Postman,2

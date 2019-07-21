@@ -1,13 +1,13 @@
 <template>
-  <div class="home"></div>
+  <div class="jm-home"></div>
 </template>
 
 <script>
 export default {
-  name: 'Home',
+  name: 'JmHome',
 };
 </script>
 
 <style lang="less" scoped>
-.home {}
+.jm-home {}
 </style>

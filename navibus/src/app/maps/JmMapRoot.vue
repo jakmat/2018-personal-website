@@ -1,5 +1,5 @@
 <template>
-  <div class="map">
+  <div class="jm-map-root">
     <div id="leaflet"></div>
   </div>
 </template>
@@ -8,7 +8,7 @@
 import leaflet from 'leaflet';
 
 export default {
-  name: 'Chart',
+  name: 'JmMapRoot',
 
   data() {
     return {
@@ -41,7 +41,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.map {
+.jm-map-root {
   // background-color: #202020;
   width: 100%;
   height: 100%;

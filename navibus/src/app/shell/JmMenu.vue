@@ -1,24 +1,24 @@
 <template>
-  <div class="panel">
-    <!-- <div class="panel__toggle"></div> -->
+  <div class="jm-menu">
+    <!-- <div class="jm-menu__toggle"></div> -->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Panel',
+  name: 'JmMenu',
 };
 </script>
 
 <style lang="less" scoped>
 
-.panel {
+.jm-menu {
 // @import '@/global.less';
   // background-color: @panel-background;
-  width: 19vw;
+  width: 17vw;
   height: 100%;
 
-  &__toggle {
+  .jm-menu__toggle {
     position: relative;
     top: 25vh;
     left: 19.5vw;

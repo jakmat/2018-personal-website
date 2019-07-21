@@ -1,18 +1,18 @@
 <template>
-  <div class="content__inspirations">
+  <div class="jm-inspirations">
     <span>Inspirations</span>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ContentInspirations',
+  name: 'JmInspirations',
 };
 </script>
 
 <style lang="less" scoped>
-.content__inspirations {
+.jm-inspirations {
   width: 100%;
-  height: 100%;  
+  height: 100%;
 }
 </style>

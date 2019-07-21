@@ -1,23 +1,23 @@
 <template>
-  <div class="content__maps">
-    <chart />
+  <div class="jm-maps">
+    <jm-map-root/>
   </div>
 </template>
 
 <script>
-import Chart from '../../map/Chart.vue'
+import JmMapRoot from './JmMapRoot.vue'
 
 export default {
-  name: 'ContentMaps',
+  name: 'JmMaps',
  
   components: { 
-    Chart 
+    JmMapRoot 
   }
 };
 </script>
 
 <style lang="less" scoped>
-.content__maps {
+.jm-maps {
   width: 100%;
   height: 100%;  
 }
