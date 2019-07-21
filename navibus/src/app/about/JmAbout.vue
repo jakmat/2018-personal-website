@@ -1,9 +1,9 @@
 <template>
-  <div class="jm-about">
-    <ul>
+  <div class="jm-tech-stack">
+    <ul class="jm-tech-stack__legend">
       <li v-for="description in legend">{{description}}</li>
     </ul>
-    <ul>
+    <ul class="jm-tech-stack__items">
       <li v-for="technology in stack">{{technology.name}} {{technology.stars}}</li>
     </ul>
   </div>
@@ -52,8 +52,25 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.jm-about {
-  width: 100%;
-  height: 100%;  
+@import '../../mixins.less';
+
+.jm-tech-stack {
+
+  .jm-tech-stack__legend {
+
+  }
+
+  .jm-tech-stack__items {
+    margin-top: 50px;
+    .flex(column, flex-start, flex-start);
+    flex-wrap: wrap;
+    height: 500px;
+
+    li {
+      width: 300px;
+      margin: 0;
+    }    
+  }
+
 }
 </style>

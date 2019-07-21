@@ -1,11 +1,13 @@
 <template>
   <div class="jm-content">
+    <jm-header />
     <component :is="activeContent"></component>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
+import JmHeader from './JmHeader.vue';
 import JmAbout from '../about/JmAbout.vue';
 import JmProjects from '../projects/JmProjects.vue';
 import JmInspirations from '../inspirations/JmInspirations.vue';
@@ -18,6 +20,7 @@ export default {
   name: 'JmContent',
 
   components: {
+    JmHeader,
     JmAbout,
     JmProjects,
     JmInspirations,
@@ -37,8 +40,9 @@ export default {
 @import '../../global.less';
 
 .jm-content {
-  min-width: 82vw;
-  height: 88vh;
+  width: 100%;
+  max-height: 880px;
+  margin: 18px 20px 20px 0;
   background-color: @background-content;
   overflow-y: auto;
 }

@@ -5,7 +5,7 @@
     "url": "www.leica-geosystems.com/services-and-support/workflow-services/leica-conx",
     "role": "employee",
     "job": "Frontend Developer",
-    "company": "Leica Geosystems (part of Hexagon)",
+    "company": "Leica Geosystems (Hexagon)",
     "project": "Leica ConX",
     "description": "programming UI components, filters and 3D map for visualising construcion site machines, reference models and constructed data in real time",
     "stack": "HTML,CSS,LESS,JavaScript,Vue.js,Cesium.js"
@@ -93,7 +93,7 @@
     "url": "",
     "role": "student",
     "job": "Student / Frontend Developer",
-    "company": "University of Lodz, Faculty of Maths and IT",
+    "company": "University of Lodz",
     "project": "Protected Nature and Monument Browser",
     "description": "project for Object Oriented Programming and Databases subjects",
     "stack": "C#,SQL,Oracle Data Modeller,Oracle Data Developer"

@@ -1,9 +1,5 @@
 <template>
   <div class="jm-header">
-    <div class="jm-header__title">
-      <img class="jm-header__title__logo" src="../../assets/logo2.png" alt="Logo złożone z połączonych liter inicjałów JAKMAT">
-      <h1 class="jm-header__title__person">Personal website of Jakub Matusiak, map-oriented Frontend Developer</h1>
-    </div>
     <ul class="jm-header__menu">
       <li 
         class="jm-header__menu__link"
@@ -42,32 +38,14 @@ export default {
 @import '../../mixins.less';
 
 .jm-header {
-  width: 100vw;
+  width: 100%;
   height: 10%;
-  .flex(row, flex-start, center);
-
-  .jm-header__title {
-  display: flex;
-  padding-left: 12px;
-  .flex(row, space-between, center);
-
-    .jm-header__title__logo {
-      display: block;
-      height: 50px;
-      opacity: 0.8;
-    }
-
-    .jm-header__title__person {
-      width: 180px;
-      font-size: 10px;
-      padding-left: 5px;
-      text-align: center;
-    }
-  }
+  .flex(row, flex-start, flex-start);
+  background-color: @background-main;
 
   .jm-header__menu {
     width: 100%;
-    .flex(row, flex-start, center);
+    .flex(row, flex-start, flex-start);
     
     .jm-header__menu__link {
       cursor: pointer;

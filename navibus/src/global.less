@@ -2,6 +2,10 @@
 // MAIN
 @background-main: #252525;
 @background-content: lighten(@background-main, 5%);
+@appBorderRadius: 3px;
+
+@appBackgroundColor: rgba(37, 37, 37, 1);
+@itemBackgroundColor: fade(@appBackgroundColor, 95%);
 
 
 // NAVBAR
@@ -31,9 +35,28 @@
 }
 
 @font-app: 'Roboto-Regular';
-@font-color-light: #F0F0F0;
+@appFontSize: 10px;
+
+// COLORS // todo: export to colors.less
+@font-color-light: rgba(240, 240, 240, 1);
 @font-color-medium: #9D9D9D;
 @font-color-dark: #202020;
 
+@base-font-color-light: rgba(240, 240, 240, 1);
+@font-color-light-active: @base-font-color-light;
+@font-color-light-hover: fade(@base-font-color-light, 80%);
+@font-color-light-inactive: fade(@base-font-color-light, 60%);
+@font-color-light-disabled: fade(@base-font-color-light, 40%);
+
 @link-hover: 10%;
 @link-active: 20%;
+
+// PROJECT PORTFOLIO
+@projectTimeWidth: 40px;
+@projectWebsiteWidth: 160px;
+@projectCompanyWidth: 180px;
+@projectOccupationWidth: 100px;
+@projectTitleWidth: 200px;
+@projectDescriptionWidth: 520px;
+@projectStackWidth: 250px;
+@projectRoleWidth: 100px;

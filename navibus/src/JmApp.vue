@@ -1,26 +1,19 @@
 <template>
   <div id="jm-app">
-    <jm-header />
-    <div class="jm-main">
-      <jm-menu />
-      <jm-content />
-    </div>
+    <jm-home/>
   </div>
 </template>
 
 <script>
 import store from 'vuex';
-import JmHeader from './app/shell/JmHeader.vue';
-import JmMenu from './app/shell/JmMenu.vue';
-import JmContent from './app/shell/JmContent.vue';
+import JmHome from './app/shell/JmHome.vue';
+
 
 export default {
   name: 'JmApp',
 
   components: {
-    JmHeader,
-    JmMenu,
-    JmContent,
+    JmHome
   },
 
   mounted() {
@@ -68,16 +61,16 @@ body {
 #jm-app {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
 
-  .jm-main {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 100%;
-    height: 90%;
-  }
+  // .jm-main {
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-content: flex-start;
+  //   align-items: flex-start;
+  //   width: 100%;
+  //   height: 90%;
+  // }
 }
 </style>
