@@ -2,7 +2,7 @@
   <div class="jm-lab">
     <!-- <jm-data :data="lines" :input="changeSelectedLines"/> -->
     <!-- <jm-lang/> -->
-    <!-- <jm-kamperen/> -->
+    <jm-kamperen/>
   </div>
 </template>
 
@@ -10,7 +10,7 @@
 import { mapGetters, mapMutations } from 'vuex';
 // import JmData from '../../modules/JmData';
 // import JmLang from '../../modules/JmLang';
-// import JmKamperen from '../../modules/JmKamperen';
+import JmKamperen from '../../modules/JmKamperen';
 
 export default {
   name: 'JmLab',
@@ -18,7 +18,7 @@ export default {
   components: {
     // JmData,
     // JmLang,
-    // JmKamperen
+    JmKamperen
   },
 
   computed: {

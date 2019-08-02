@@ -15,7 +15,7 @@ import { kamperen } from '../assets/kamperen.js';
 import _ from 'lodash';
 
 export default {
-  name: 'JakmatKamperen',
+  name: 'JmKamperen',
 
   data() {
     return {
@@ -24,7 +24,7 @@ export default {
   },
 
   mounted() {
-      console.clear();
+    console.clear();
     this.kamperen = document.createElement('html');
     this.kamperen.innerHTML = kamperen;
     const scripts = this.kamperen.getElementsByTagName('script');
@@ -34,20 +34,30 @@ export default {
     });
     const trimmed = _.map(markers, (marker) => {
         return _.split(marker, '[');
-    })
-    const locations = _.map(trimmed, (item) => {
-        return {
-            coords: _.trimEnd(item[1], ']'),
-            details: item[4]
-        };
     });
-    console.log(locations)
+    const locations = _.map(trimmed, (item) => {
+        const coords = _.truncate(item[1], { separator: ']', omission: '' }).split(', ');
+				const details = item[4].split('<');   
+				const nameUrl = _.trimStart(details[2], 'href');
+                const nameWebsite = _.trimStart(details[2], 'a class="heading-bubble" href="https://');
+                const [website, name] = nameWebsite.split('">');
+        return {
+            coords: {
+                lon: coords[0],
+                lat: coords[1]
+            },
+            metadata: {
+                name,
+                website,
+                street: _.trimStart(details[4], 'p>'),
+                town: _.trimStart(details[5], 'br />'),
+                province: _.trimStart(details[6], 'br />'),
+            },
+        };
+        
+    });
+    console.log(locations);
   },
-
-//   computed: {
-   
-//   },
-
 };
 </script>
 
