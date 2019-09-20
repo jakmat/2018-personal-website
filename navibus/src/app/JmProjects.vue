@@ -59,10 +59,9 @@ export default {
 @import '../global.less';
 
 .jm-projects {
-  
+
   .jm-projects__list {
     .flex(column, center, flex-start);
-    padding-top: 45px;    
 
     .jm-projects__list__item {
       .size(96%, 30px);
@@ -70,15 +69,12 @@ export default {
       font-size: @appFontSize;
       background-color: @itemBackgroundColor;
       border-radius: @appBorderRadius;
-      margin: 5px;
+      margin: 5px 0;
       padding: 3px 0;
 
       &.project-list-header {
         color: @font-color-light-disabled;
-        position: fixed;
-        width: 70%;
-        top: 98px;
-        z-index: 0;
+        position: sticky;
       }
 
       .jm-projects__list__item__time {

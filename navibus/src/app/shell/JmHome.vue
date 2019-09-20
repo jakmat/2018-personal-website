@@ -1,25 +1,23 @@
 <template>
   <div class="jm-home">
-    <jm-menu/>
-    <div class="jm-main">
-      <jm-header/>
-      <jm-content/>
-    </div>
+    <jm-header/>
+    <jm-content/>
+    <jm-footer/>
   </div>
 </template>
 
 <script>
-import JmMenu from './JmMenu.vue';
 import JmHeader from './JmHeader.vue';
 import JmContent from './JmContent.vue';
+import JmFooter from './JmFooter.vue';
 
 export default {
   name: 'JmHome',
 
   components: {
-    JmMenu,
     JmHeader,
     JmContent,
+    JmFooter
   },
 };
 </script>
@@ -28,28 +26,22 @@ export default {
 @import '../../mixins.less';
 
 .jm-home {
- .flex(row, flex-start, flex-start);
+ .flex(column, flex-start, flex-start);
  width: 100vw;
- height: 98vh;
+ height: 100vh;
  overflow: hidden;
-   
-  .jm-menu {
-    .size(250px, 100%);
-    padding: 20px;
-   }
 
-  .jm-main {
-    .size(77vw, 95%);
-    padding-top: 20px;
+  .jm-header {
+    .size(100%, 10%);
+  }
 
-    .jm-header {
-     .size(100%, 12%);
-    }
- 
-   .jm-content {
-     .size(100%, 88%);
-     overflow-y: auto;
-   }
- }
+  .jm-content {
+    .size(100%, 85%);
+    overflow-y: auto;
+  }
+
+  .jm-footer {
+    .size(100%, 5%);
+  }
 }
 </style>

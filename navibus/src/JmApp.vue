@@ -14,27 +14,14 @@ export default {
 
   components: {
     JmHome
-  },
-
-  mounted() {
-    this.updateVariable(1987);
-  },
-
-  computed: {
-    // ...mapGetters(['variable'])
-  },
-
-  methods: {
-    async updateVariable(value) {
-      await this.$store.dispatch('changeVariable', value);
-    },
-  },
+  }  
 };
 </script>
 
 <style lang="less">
 @import url("~leaflet/dist/leaflet.css");
 @import './global.less';
+@import './mixins.less';
 
 body {
   box-sizing: border-box;
@@ -44,6 +31,8 @@ body {
   color: @font-color-light;
   font-family: @font-app;
 
+  .scrollbar();
+ 
   a {
     text-decoration: none;
     color: @font-color-light;
@@ -52,23 +41,5 @@ body {
   ul {
     list-style-type: none;
   }
-  // font-family: 
-}
-
-#jm-app {
-  // width: 100vw;
-  // height: 100vh;
-  // overflow-y: hidden;
-  // display: flex;
-  // flex-direction: column;
-
-  // .jm-main {
-  //   display: flex;
-  //   flex-direction: row;
-  //   justify-content: flex-start;
-  //   align-items: flex-start;
-  //   width: 100%;
-  //   height: 90%;
-  // }
 }
 </style>

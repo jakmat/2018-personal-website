@@ -1,28 +1,28 @@
 <template>
-  <div class="jm-menu">
-    <div class="jm-menu__title">
-      <img class="jm-menu__title__logo" src="../../assets/logo2.png" alt="Logo złożone z połączonych liter inicjałów JAKMAT">
-      <h1 class="jm-menu__title__person">Personal website of Jakub Matusiak, map-oriented Frontend Developer</h1>
+  <div class="jm-logo">
+    <div class="jm-logo__title">
+      <img class="jm-logo__title__logo" src="../../assets/logo2.png" alt="Logo złożone z połączonych liter inicjałów JAKMAT">
+      <h1 class="jm-logo__title__person">Personal website of Jakub Matusiak, map-oriented Frontend Developer</h1>
     </div>
-    <!-- <div class="jm-menu__toggle"></div> -->
+    <!-- <div class="jm-logo__toggle"></div> -->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'JmMenu',
+  name: 'JmLogo',
 };
 </script>
 
 <style lang="less" scoped>
 @import '../../mixins.less';
 
-.jm-menu {
+.jm-logo {
 // @import '@/global.less';
   // background-color: @panel-background;
-  min-width: 250px;
+  // min-width: 250px;
 
-  // .jm-menu__toggle {
+  // .jm-logo__toggle {
   //   position: relative;
   //   top: 25vh;
   //   left: 19.5vw;
@@ -31,16 +31,17 @@ export default {
   //   background-color: red;
   // }
 
-  .jm-menu__title {
+  .jm-logo__title {
+    .size(auto, 56px);
     .flex(row, center, center);
 
-    .jm-menu__title__logo {
+    .jm-logo__title__logo {
       display: block;
       height: 50px;
       opacity: 0.8;
     }
 
-    .jm-menu__title__person {
+    .jm-logo__title__person {
       width: 180px;
       font-size: 10px;
       padding-left: 5px;

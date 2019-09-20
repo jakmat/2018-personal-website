@@ -1,5 +1,6 @@
 <template>
   <div class="jm-header">
+    <jm-logo/>
     <ul class="jm-header__menu">
       <li 
         class="jm-header__menu__link"
@@ -17,10 +18,15 @@
 </template>
 
 <script>
+import JmLogo from './JmLogo.vue';
 import { mapGetters, mapActions } from 'vuex';
 
 export default {
   title: 'JmHeader',
+
+  components: {
+    JmLogo
+  },
 
   computed: {
     ...mapGetters(['tabs', 'lab', 'activeContent']),
@@ -43,8 +49,9 @@ export default {
 
 .jm-header {
   width: 100%;
-  .flex(row, flex-start, flex-start);
+  .flex(row, flex-start, center);
   background-color: @background-main;
+  padding-left: 40px;
 
   .jm-header__menu {
     width: 100%;

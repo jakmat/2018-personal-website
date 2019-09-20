@@ -63,19 +63,20 @@ export default {
 
   .jm-tech-stack__legend {
     font-size: @appFontSize;
+    margin-left: 2px;
   }
 
   .jm-tech-stack__items {
-    // margin-top: 30px;
     .flex(column, flex-start, flex-start);
     flex-wrap: wrap;
     height: 61vh;
+    padding-top: 10px;
 
     li {
       font-size: @appFontSize;
       background-color: @itemBackgroundColor;
       border-radius: @appBorderRadius;
-      width: 200px;
+      width: 19vw;
       margin: 2px 0;
       padding: 5px 15px;
       .flex(row, space-between, center);

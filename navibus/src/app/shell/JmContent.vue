@@ -39,9 +39,6 @@ export default {
 
 .jm-content {
   overflow-y: auto;
-  // .flex(column, flex-start, center);
-  // width: 100%;
-  // margin: 18px 20px 20px 0;
   background-color: @background-content;
 }
 </style>
