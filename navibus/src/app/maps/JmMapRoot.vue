@@ -19,7 +19,6 @@ export default {
   mounted() {
     this.map = leaflet.map('leaflet').setView([51.743323, 19.402368], 16);
     this.addMap();
-    // console.log('map', this.map);
   },
 
   methods: {

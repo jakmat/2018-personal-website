@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import portfolio from '../../assets/projects.json';
+import portfolio from '../assets/projects.json';
 import _ from 'lodash';
 
 export default {
@@ -32,7 +32,7 @@ export default {
 
   computed: {
     projects() {
-      console.log(portfolio)
+      console.log(portfolio);
       return portfolio.map((i) => {
         return {
           ...i,
@@ -55,13 +55,14 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import '../../mixins.less';
-@import '../../global.less';
+@import '../mixins.less';
+@import '../global.less';
 
 .jm-projects {
   
   .jm-projects__list {
-    .flex(column, center, flex-start);    
+    .flex(column, center, flex-start);
+    padding-top: 45px;    
 
     .jm-projects__list__item {
       .size(96%, 30px);
@@ -74,6 +75,10 @@ export default {
 
       &.project-list-header {
         color: @font-color-light-disabled;
+        position: fixed;
+        width: 70%;
+        top: 98px;
+        z-index: 0;
       }
 
       .jm-projects__list__item__time {

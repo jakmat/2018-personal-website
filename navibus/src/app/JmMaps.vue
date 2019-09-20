@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import JmMapRoot from './JmMapRoot.vue'
+import JmMapRoot from './maps/JmMapRoot.vue'
 
 export default {
   name: 'JmMaps',

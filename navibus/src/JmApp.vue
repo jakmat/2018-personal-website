@@ -26,8 +26,6 @@ export default {
 
   methods: {
     async updateVariable(value) {
-      console.log(this.$store);
-
       await this.$store.dispatch('changeVariable', value);
     },
   },
@@ -37,7 +35,6 @@ export default {
 <style lang="less">
 @import url("~leaflet/dist/leaflet.css");
 @import './global.less';
-
 
 body {
   box-sizing: border-box;
@@ -59,8 +56,9 @@ body {
 }
 
 #jm-app {
-  width: 100vw;
-  height: 100vh;
+  // width: 100vw;
+  // height: 100vh;
+  // overflow-y: hidden;
   // display: flex;
   // flex-direction: column;
 

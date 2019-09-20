@@ -4,13 +4,16 @@
       <li v-for="description in legend">{{description}}</li>
     </ul>
     <ul class="jm-tech-stack__items">
-      <li v-for="technology in stack">{{technology.name}} {{technology.stars}}</li>
+      <li v-for="technology in stack">
+        <span>{{technology.name}}</span> 
+        <span>{{technology.stars}}</span>
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
-import technologies from '../../assets/technologies.json';
+import technologies from '../assets/technologies.json';
 
 export default {
   name: 'JmAbout',
@@ -52,23 +55,30 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import '../../mixins.less';
+@import '../mixins.less';
+@import '../global.less';
 
 .jm-tech-stack {
+  padding: 10px 0;
 
   .jm-tech-stack__legend {
-
+    font-size: @appFontSize;
   }
 
   .jm-tech-stack__items {
-    margin-top: 50px;
+    // margin-top: 30px;
     .flex(column, flex-start, flex-start);
     flex-wrap: wrap;
-    height: 500px;
+    height: 61vh;
 
     li {
-      width: 300px;
-      margin: 0;
+      font-size: @appFontSize;
+      background-color: @itemBackgroundColor;
+      border-radius: @appBorderRadius;
+      width: 200px;
+      margin: 2px 0;
+      padding: 5px 15px;
+      .flex(row, space-between, center);
     }    
   }
 

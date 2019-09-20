@@ -1,32 +1,29 @@
 <template>
   <div class="jm-content">
-    <jm-header />
     <component :is="activeContent"></component>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex';
-import JmHeader from './JmHeader.vue';
-import JmAbout from '../about/JmAbout.vue';
-import JmProjects from '../projects/JmProjects.vue';
-import JmInspirations from '../inspirations/JmInspirations.vue';
-import JmMaps from '../maps/JmMaps.vue';
-import JmContact from '../contact/JmContact.vue';
-import JmBlog from '../blog/JmBlog.vue';
-import JmLab from '../lab/JmLab.vue';
+import JmAbout from '../JmAbout.vue';
+import JmProjects from '../JmProjects.vue';
+// import JmInspirations from '../JmInspirations.vue';
+// import JmMaps from '../JmMaps.vue';
+// import JmContact from '../JmContact.vue';
+// import JmBlog from '../JmBlog.vue';
+import JmLab from '../JmLab.vue';
 
 export default {
   name: 'JmContent',
 
   components: {
-    JmHeader,
     JmAbout,
     JmProjects,
-    JmInspirations,
-    JmMaps,
-    JmBlog,
-    JmContact,
+    // JmInspirations,
+    // JmMaps,
+    // JmBlog,
+    // JmContact,
     JmLab
   },
   
@@ -37,13 +34,14 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import '../../mixins.less';
 @import '../../global.less';
 
 .jm-content {
-  width: 100%;
-  max-height: 880px;
-  margin: 18px 20px 20px 0;
-  background-color: @background-content;
   overflow-y: auto;
+  // .flex(column, flex-start, center);
+  // width: 100%;
+  // margin: 18px 20px 20px 0;
+  background-color: @background-content;
 }
 </style>

@@ -8,9 +8,9 @@
 
 <script>
 import { mapGetters, mapMutations } from 'vuex';
-// import JmData from '../../modules/JmData';
-// import JmLang from '../../modules/JmLang';
-import JmKamperen from '../../modules/JmKamperen';
+// import JmData from '../modules/JmData';
+// import JmLang from '../modules/JmLang';
+import JmKamperen from '../modules/JmKamperen';
 
 export default {
   name: 'JmLab',

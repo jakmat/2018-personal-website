@@ -32,7 +32,6 @@ export default {
                 en: word.English
             };
         });
-        console.log(words);
         return words;
     }
   },

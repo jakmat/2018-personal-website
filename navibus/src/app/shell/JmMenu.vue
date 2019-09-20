@@ -20,9 +20,7 @@ export default {
 .jm-menu {
 // @import '@/global.less';
   // background-color: @panel-background;
-  height: 100%;
-  width: 300px;
-  padding: 20px;
+  min-width: 250px;
 
   // .jm-menu__toggle {
   //   position: relative;

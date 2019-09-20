@@ -7,8 +7,8 @@
           lab: tab.component === 'jm-lab',
           active: tab.component === activeContent 
         }"
-        v-if="tabs.length"
-        v-for="tab in tabs"
+        v-if="tabList.length"
+        v-for="tab in tabList"
         @click="goTo(tab.component)">
         <span>{{ tab.title }}</span>
       </li>
@@ -24,6 +24,10 @@ export default {
 
   computed: {
     ...mapGetters(['tabs', 'lab', 'activeContent']),
+
+    tabList() {
+      return this.lab ? this.tabs : this.tabs.filter(t => t.component !== 'jm-lab');
+    }
   },
 
   methods: {
@@ -39,7 +43,6 @@ export default {
 
 .jm-header {
   width: 100%;
-  height: 10%;
   .flex(row, flex-start, flex-start);
   background-color: @background-main;
 

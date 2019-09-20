@@ -6,7 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     variable: 0,
-    lab: true,
+    lab: false,
     tabs: [
         {
             title: 'Tech Stack',
@@ -123,17 +123,13 @@ export default new Vuex.Store({
     },
     setActiveContent(state, payload) {
       state.activeContent = payload;
-      console.log('Active content:', state.activeContent);
     },
     changeSelectedLines(state, payload) {
       state.selectedLines = [...payload];
-      console.clear();
-      console.log('selected lines:', state.selectedLines);
     }
   },
   actions: {
     async changeVariable(context, payload) {
-      console.log(payload);
       await context.commit('setVariable', payload);
     },
     changeActiveContent(context, payload) {

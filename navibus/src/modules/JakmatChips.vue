@@ -30,7 +30,6 @@ export default {
   name: 'JakmatChips',
 
   mounted() {
-      console.log(this.value)
   },
 
   components: {
