@@ -23,8 +23,11 @@ export default {
 @import './global.less';
 @import './mixins.less';
 
+* {
+    box-sizing: border-box;
+}
+
 body {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
   background-color: @background-main;

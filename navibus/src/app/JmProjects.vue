@@ -1,23 +1,23 @@
 <template>
   <div class="jm-projects">
     <ul class="jm-projects__list">      
-      <li class="jm-projects__list__item project-list-header">
-        <span class="jm-projects__list__item__time">Start End</span>        
-        <span class="jm-projects__list__item__website">Website</span>        
-        <span class="jm-projects__list__item__company">Company</span>        
-        <span class="jm-projects__list__item__title">Project</span>        
-        <span class="jm-projects__list__item__description">Description</span>
-        <span class="jm-projects__list__item__stack">Tech Stack</span>
-        <span class="jm-projects__list__item__role">Role</span>
+      <li class="jm-projects__list__item jm-projects__list__item--header">
+        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--time">Start End</span>        
+        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--website">Website</span>        
+        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--company">Company</span>        
+        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--title">Project</span>        
+        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--description">Description</span>
+        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--stack">Tech Stack</span>
+        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--role">Role</span>
       </li>
       <li class="jm-projects__list__item" v-for="project in projects">
-        <span class="jm-projects__list__item__time">{{project.start}} {{project.end}}</span>        
-        <span class="jm-projects__list__item__website" :href="project.url">{{project.website}}</span>        
-        <span class="jm-projects__list__item__company">{{project.company}}</span>        
-        <span class="jm-projects__list__item__title">{{project.project}}</span>        
-        <span class="jm-projects__list__item__description">{{project.description}}</span>
-        <span class="jm-projects__list__item__stack">{{project.stack}}</span>
-        <span class="jm-projects__list__item__role">{{project.role}}</span>       
+        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--time">{{project.start}} {{project.end}}</span>        
+        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--website" :href="project.url">{{project.website}}</span>        
+        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--company">{{project.company}}</span>        
+        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--title">{{project.project}}</span>        
+        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--description">{{project.description}}</span>
+        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--stack">{{project.stack}}</span>
+        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--role">{{project.role}}</span>       
       </li>
     </ul>
   </div>
@@ -38,7 +38,7 @@ export default {
           ...i,
           start: i.start.substring(0, 4),
           end: i.end.substring(0, 4),
-          website: i.url.length > 20 ? i.url.substring(0, 20) + '...' : i.url,
+          website: i.url.length > 30 ? i.url.substring(0, 30) + '...' : i.url,
           stack: this.addSpaces(i.stack)
         };
       });
@@ -64,53 +64,73 @@ export default {
     .flex(column, center, flex-start);
 
     .jm-projects__list__item {
-      .size(96%, 30px);
+      .size(94vw, auto);
+      min-height: 30px;
       .flex(row, flex-start, center);
+      flex-wrap: wrap;
       font-size: @appFontSize;
       background-color: @itemBackgroundColor;
       border-radius: @appBorderRadius;
       margin: 5px 0;
       padding: 3px 0;
 
-      &.project-list-header {
+      &--header {
+        background-color: @itemBackgroundColorDisabled;
         color: @font-color-light-disabled;
-        position: sticky;
-      }
 
-      .jm-projects__list__item__time {
-        width: @projectTimeWidth;
-        padding-left: 10px;
+        & span {
+          text-align: center;
+          padding-right: 30px;
+          
+          &:first-child {
+            padding-right: 0;
+          }
+        }
       }
+      
+      .jm-projects__list__item__caption {
+        // background-color: black;
+        margin: 0 15px;
+        word-break: break-word;
 
-      .jm-projects__list__item__website {
-        width: @projectWebsiteWidth;
-      }
+        &--time {
+          width: @projectTimeWidth;
+          text-align: center;
+        }
 
-      .jm-projects__list__item__company {
-        width: @projectCompanyWidth;
-      }
+        &--website {
+          width: @projectWebsiteWidth;
+        }
 
-      .jm-projects__list__item__occupation {
-        width: @projectOccupationWidth;
-      }
+        &--company {
+          width: @projectCompanyWidth;
+        }
 
-      .jm-projects__list__item__title {
-        width: @projectTitleWidth;
-      }
+        &--occupation {
+          width: @projectOccupationWidth;
+        }
 
-      .jm-projects__list__item__description {
-        width: @projectDescriptionWidth;      
-      }
+        &--title {
+          width: @projectTitleWidth;
+        }
 
-     .jm-projects__list__item__stack {
-       width: @projectStackWidth;
-      }
+        &--description {
+          width: @projectDescriptionWidth;      
+        }
 
-      .jm-projects__list__item__role {
-        width: @projectRoleWidth;
-        padding-right: 10px;
+        &--stack {
+          width: @projectStackWidth;
+        }
+
+        &--role {
+          width: @projectRoleWidth;
+        }
       }
     }
+  }
+
+  .projects() {
+    
   }
 }
 </style>
