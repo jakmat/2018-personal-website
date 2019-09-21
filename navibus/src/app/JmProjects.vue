@@ -62,11 +62,12 @@ export default {
 
   .jm-projects__list {
     .flex(column, center, flex-start);
+    margin: 10px 0;
 
     .jm-projects__list__item {
       .size(94vw, auto);
       min-height: 30px;
-      .flex(row, flex-start, center);
+      .flex(row, space-between, center);
       flex-wrap: wrap;
       font-size: @appFontSize;
       background-color: @itemBackgroundColor;
@@ -115,7 +116,7 @@ export default {
         }
 
         &--description {
-          width: @projectDescriptionWidth;      
+          width: @projectDescriptionWidth;
         }
 
         &--stack {

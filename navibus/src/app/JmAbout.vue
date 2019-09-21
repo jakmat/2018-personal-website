@@ -64,13 +64,13 @@ export default {
   .jm-tech-stack__legend {
     font-size: @appFontSize;
     margin-left: 2px;
+    margin-top: 6px;
   }
 
   .jm-tech-stack__items {
     .flex(column, flex-start, flex-start);
     flex-wrap: wrap;
     height: 61vh;
-    padding-top: 10px;
 
     li {
       font-size: @appFontSize;
