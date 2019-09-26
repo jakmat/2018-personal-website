@@ -23,8 +23,24 @@
     }
 }
 
-.responsive(@maxWidth; @rules) {
-    @media only screen and (max-width: @maxWidth) {
+.responsive-min(@minWidth; @rules) {
+    @media only screen and (min-width: @minWidth) {
         @rules();
     }
+}
+
+.responsive-sm(@rules) {
+    .responsive-min(576px, @rules);
+}
+
+.responsive-md(@rules) {
+    .responsive-min(768px, @rules);
+}
+
+.responsive-lg(@rules) {
+    .responsive-min(992px, @rules)
+}
+
+.responsive-xl(@rules) {
+    .responsive-min(1200px, @rules)
 }

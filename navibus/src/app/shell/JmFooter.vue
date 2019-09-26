@@ -1,6 +1,6 @@
 <template>
   <div class="jm-footer">
-    <span>&copy; 2018 jakmat</span>
+    <span class="jm-footer__copyright">&copy; 2018 jakmat</span>
   </div>
 </template>
 
@@ -20,8 +20,9 @@ export default {
   font-size: @appFontSize;
   background-color: @background-main;
   
-  span {
+  .jm-footer__copyright {
     padding: 0 20px 2px 0;
+    user-select: none;
   }
 }
 </style>

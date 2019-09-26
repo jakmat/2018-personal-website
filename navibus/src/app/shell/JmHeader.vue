@@ -1,6 +1,11 @@
 <template>
   <div class="jm-header">
-    <jm-logo/>
+    <div class="jm-header__logo">
+      <div class="jm-header__logo__title">
+        <img class="jm-header__logo__title__logo" src="../../assets/logo2.png" alt="Logo złożone z połączonych liter inicjałów JAKMAT">
+        <h1 class="jm-header__logo__title__person">Personal Website of Jakub Matusiak, Geospatial Web Developer</h1>
+      </div>
+    </div>
     <ul class="jm-header__menu">
       <li 
         class="jm-header__menu__link"
@@ -18,15 +23,10 @@
 </template>
 
 <script>
-import JmLogo from './JmLogo.vue';
 import { mapGetters, mapActions } from 'vuex';
 
 export default {
   title: 'JmHeader',
-
-  components: {
-    JmLogo
-  },
 
   computed: {
     ...mapGetters(['tabs', 'lab', 'activeContent']),
@@ -47,32 +47,77 @@ export default {
 @import '../../global.less';
 @import '../../mixins.less';
 
-.jm-header {
-  width: 100%;
-  .flex(row, flex-start, center);
+.jm-header {  
+  .flex(row, center, center);
   background-color: @background-main;
-  padding-left: 40px;
+  flex-wrap: wrap;
+  padding-top: 25px;
+    
+  .responsive-sm({
+    .flex(row, flex-start, center);
+  });
+  
+  .responsive-lg({    
+    flex-wrap: nowrap;
+    padding-top: 0;
+  });
+
+  .jm-header__logo {
+    padding: 0 40px;
+
+    .jm-header__logo__title {
+      .size(auto, 56px);
+      .flex(row, center, center);
+
+      .jm-header__logo__title__logo {
+        display: block;
+        height: 50px;
+        opacity: 0.8;
+      }
+
+      .jm-header__logo__title__person {
+        width: 180px;
+        font-size: 10px;
+        padding: 1px 0 0 5px;
+        text-align: center;
+        user-select: none;
+        line-height: 15px;
+      }
+    }
+  }
 
   .jm-header__menu {
-    width: 100%;
-    .flex(row, flex-start, flex-start);
+    .flex(row, center, flex-start);
+    flex-wrap: wrap;
+    padding: 0 40px;
+
+
+    .responsive-lg({    
+      .flex(row, flex-start, flex-start);
+      flex-wrap: nowrap;
+    });
     
     .jm-header__menu__link {
       cursor: pointer;
       font-size: @navbar-link-font-size;
       background: @navbar-link-background;
       text-align: center;
-      width: 100px;
-      margin: 0 10px;
+      .size(200px, 50px);
+      .flex(row, center, center);
+      margin: 15px 10px;
       padding: 5px 10px;
-      
+      border-radius: @appBorderRadius;
+      user-select: none;
+
       &:first-child {
         margin-left: 0;
-      }
-      
-      &:last-child {
         margin-right: 0;
       }
+
+      .responsive-lg({
+        .size(100px, auto);
+        margin: 5px 10px;
+      });
       
       &.lab {
         background-color: @navbar-link-background-lab;

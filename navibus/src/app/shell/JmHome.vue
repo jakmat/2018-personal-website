@@ -26,22 +26,24 @@ export default {
 @import '../../mixins.less';
 
 .jm-home {
- .flex(column, flex-start, flex-start);
- width: 100vw;
- height: 100vh;
- overflow: hidden;
+  .flex(column, flex-start, flex-start);
+  .responsive-lg({
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 
-  .jm-header {
-    .size(100%, 10%);
-  }
+    .jm-header {
+      .size(100%, 10%);
+    }
 
-  .jm-content {
-    .size(100%, 85%);
-    overflow-y: auto;
-  }
+    .jm-content {
+      .size(100%, 85%);
+      overflow-y: auto;
+    }
 
-  .jm-footer {
-    .size(100%, 5%);
-  }
+    .jm-footer {
+      .size(100%, 5%);
+    }
+  });
 }
 </style>
