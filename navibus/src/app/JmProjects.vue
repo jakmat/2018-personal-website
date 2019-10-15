@@ -11,7 +11,7 @@
         <span class="jm-projects__list__item__caption jm-projects__list__item__caption--role">Role</span>
       </li>
       <li class="jm-projects__list__item" v-for="project in projects">
-        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--time">{{project.start}} {{project.end}}</span>        
+        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--time">{{project.start}} - {{project.end}}</span>        
         <span class="jm-projects__list__item__caption jm-projects__list__item__caption--website" :href="project.url">{{project.website}}</span>        
         <span class="jm-projects__list__item__caption jm-projects__list__item__caption--company">{{project.company}}</span>        
         <span class="jm-projects__list__item__caption jm-projects__list__item__caption--title">{{project.project}}</span>        
