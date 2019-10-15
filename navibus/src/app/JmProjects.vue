@@ -62,26 +62,34 @@ export default {
 
   .jm-projects__list {
     .flex(column, center, flex-start);
-    margin: 10px 0;
+    flex-wrap: wrap;
+    width: 100%;
 
     .jm-projects__list__item {
-      .size(94vw, auto);
+      .flex(column, flex-start, flex-start);
+      .size(88%, auto);
       min-height: 30px;
-      // flex-wrap: wrap;
       font-size: @appFontSize;
       background-color: @itemBackgroundColor;
       border-radius: @appBorderRadius;
       margin: 5px 0;
-      padding: 3px 0;
-
-      .flex(column, flex-start, flex-start);
-
+      padding: 10px 0;
       
+      .responsive-sm({
+        .size(92%, auto);
+      });
+
+      .responsive-md({
+        .size(95%, auto);
+      });
+
       .responsive-lg({
         .flex(row, space-between, center);
+        .size(98%, auto);
       });
 
       &--header {
+        display: none;
         background-color: @itemBackgroundColorDisabled;
         color: @font-color-light-disabled;
 
@@ -93,15 +101,21 @@ export default {
             padding-right: 0;
           }
         }
+
+        .responsive-lg({
+          display: flex;
+        });
       }
       
       .jm-projects__list__item__caption {
-        // background-color: black;
         margin: 0 15px;
         word-break: break-word;
+        padding: 5px 0;
 
         .responsive-lg({
-          
+          height: 50px;
+          padding: 0;
+                    
           &--time {
             width: @projectTimeWidth;
             text-align: center;
@@ -136,13 +150,44 @@ export default {
           }
         });
 
-
+        .responsive-xl({         
+          height: 40px;
+          
+          &--time {
+            width: @projectTimeWidthXL;
+            text-align: center;
+          }
+  
+          &--website {
+            width: @projectWebsiteWidthXL;
+          }
+  
+          &--company {
+            width: @projectCompanyWidthXL;
+          }
+  
+          &--occupation {
+            width: @projectOccupationWidthXL;
+          }
+  
+          &--title {
+            width: @projectTitleWidthXL;
+          }
+  
+          &--description {
+            width: @projectDescriptionWidthXL;
+          }
+  
+          &--stack {
+            width: @projectStackWidthXL;
+          }
+  
+          &--role {
+            width: @projectRoleWidthXL;
+          }
+        });
       }
     }
-  }
-
-  .projects() {
-    
   }
 }
 </style>
