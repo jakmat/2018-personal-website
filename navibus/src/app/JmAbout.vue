@@ -69,19 +69,46 @@ export default {
 
   .jm-tech-stack__items {
     .flex(column, flex-start, flex-start);
-    flex-wrap: wrap;
-    height: 61vh;
+    padding-left: 40px;
 
     li {
+      .flex(row, space-between, center);
       font-size: @appFontSize;
       background-color: @itemBackgroundColor;
       border-radius: @appBorderRadius;
-      width: 19vw;
+      width: 90%;
       margin: 2px 0;
       padding: 5px 15px;
-      .flex(row, space-between, center);
-    }    
-  }
+    } 
 
+    .responsive-sm({
+      flex-wrap: wrap;
+      height: 760px;
+
+      li {
+        width: 40%;
+      }
+    });
+
+    .responsive-md({
+      li {
+        width: 40%;
+      }
+    });
+
+    .responsive-lg({
+      .flex(column, flex-start, flex-start);
+      height: 500px;
+
+      li {
+        width: 30%;
+        padding: 5px 15px;      
+      }
+    });
+
+    .responsive-xl({
+      height: 510px;
+    });   
+  }
 }
 </style>
