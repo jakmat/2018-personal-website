@@ -27,6 +27,20 @@ export default {
 
 .jm-home {
   .flex(column, flex-start, flex-start);
+    
+  .jm-header {
+    .size(100%, auto);
+  }
+
+  .jm-content {
+    .size(100%, auto);
+    overflow-y: auto;
+  }
+  
+  .jm-footer {
+    .size(100%, 50px);
+  }
+
   .responsive-lg({
     width: 100vw;
     height: 100vh;
@@ -44,6 +58,6 @@ export default {
     .jm-footer {
       .size(100%, 5%);
     }
-  });
+  });  
 }
 </style>

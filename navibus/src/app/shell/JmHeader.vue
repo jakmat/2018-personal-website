@@ -51,15 +51,18 @@ export default {
   .flex(row, center, center);
   background-color: @background-main;
   flex-wrap: wrap;
-  padding-top: 25px;
+  padding-top: 20px;
     
   .responsive-sm({
     .flex(row, flex-start, center);
   });
+
+  .responsive-md({
+    padding-top: 0;
+  });
   
   .responsive-lg({    
     flex-wrap: nowrap;
-    padding-top: 0;
   });
 
   .jm-header__logo {

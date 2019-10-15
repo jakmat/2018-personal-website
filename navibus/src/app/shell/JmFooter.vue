@@ -16,13 +16,17 @@ export default {
 @import '../../mixins.less';
 
 .jm-footer {
-  .flex(row, flex-end, center);
+  .flex(row, center, center);
   font-size: @appFontSize;
   background-color: @background-main;
   
   .jm-footer__copyright {
-    padding: 0 20px 2px 0;
     user-select: none;
   }
+
+  .responsive-md({
+    .flex(row, flex-end, center);
+    padding: 0 20px 2px 0;
+  });
 }
 </style>
