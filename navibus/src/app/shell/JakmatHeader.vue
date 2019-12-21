@@ -3,7 +3,7 @@
     <div class="jakmat-header__logo">
       <div class="jakmat-header__logo__title">
         <img class="jakmat-header__logo__title__logo" src="../../assets/logo2.png" alt="Logo złożone z połączonych liter inicjałów JAKMAT">
-        <h1 class="jakmat-header__logo__title__person">Personal Website of Jakub Matusiak, Geospatial Web Developer</h1>
+        <h1 class="jakmat-header__logo__title__person">Personal Website of Jakub Matusiak, Map-Oriented Web Developer</h1>
       </div>
     </div>
     <ul class="jakmat-header__menu">
@@ -112,10 +112,10 @@ export default {
       border-radius: @appBorderRadius;
       user-select: none;
 
-      &:first-child {
-        margin-left: 0;
-        margin-right: 0;
-      }
+      // &:first-child {
+      //   margin-left: 0;
+      //   margin-right: 0;
+      // }
 
       .responsive-lg({
         .size(100px, auto);

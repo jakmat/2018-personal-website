@@ -10,11 +10,15 @@ export default new Vuex.Store({
     tabs: [
         {
             title: 'Tech Stack',
-            component: 'jakmat-about'
+            component: 'jakmat-tech-stack'
         },
         {
             title: 'Projects',
             component: 'jakmat-projects'
+        },
+        {
+            title: 'About',
+            component: 'jakmat-about'
         },
         // {
         //     title: 'Inspirations',
@@ -35,10 +39,6 @@ export default new Vuex.Store({
         //       'angielski / słówka',
         //       'niderlandzki / słówka'              
         //     ]
-        // },
-        // {
-        //     title: 'Contact',
-        //     component: 'jakmat-contact'
         // },
         {
           title: 'Lab',

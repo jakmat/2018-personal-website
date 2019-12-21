@@ -6,11 +6,11 @@
 
 <script>
 import { mapGetters } from 'vuex';
-import JakmatAbout from '../JakmatAbout.vue';
+import JakmatTechStack from '../JakmatTechStack.vue';
 import JakmatProjects from '../JakmatProjects.vue';
+import JakmatAbout from '../JakmatAbout.vue';
 // import JakmatInspirations from '../JakmatInspirations.vue';
 // import JakmatMaps from '../JakmatMaps.vue';
-// import JakmatContact from '../JakmatContact.vue';
 // import JakmatBlog from '../JakmatBlog.vue';
 import JakmatLab from '../JakmatLab.vue';
 
@@ -18,12 +18,12 @@ export default {
   name: 'JakmatContent',
 
   components: {
-    JakmatAbout,
+    JakmatTechStack,
     JakmatProjects,
+    JakmatAbout,
     // JakmatInspirations,
     // JakmatMaps,
     // JakmatBlog,
-    // JakmatContact,
     JakmatLab
   },
   
