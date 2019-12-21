@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import leaflet from 'leaflet';
-import JmApp from './JmApp.vue';
+import JakmatApp from './JakmatApp.vue';
 import store from './store';
 
 console.clear();
@@ -14,6 +14,6 @@ Vue.use(
 );
 
 new Vue({
-  render: h => h(JmApp),
+  render: h => h(JakmatApp),
   store,
-}).$mount('#jm-app');
+}).$mount('#jakmat-app');

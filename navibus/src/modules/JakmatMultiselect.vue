@@ -1,7 +1,7 @@
 <template>
-  <div class="jm-multiselect">
+  <div class="jakmat-multiselect">
     <div 
-        class="jm-multiselect__item"
+        class="jakmat-multiselect__item"
         v-for="(item, index) in value"
         :v-key="index">
         <div>{{ getSelection(item) }}</div>

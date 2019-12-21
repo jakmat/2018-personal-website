@@ -1,16 +1,16 @@
 <template>
-  <div class="jm-header">
-    <div class="jm-header__logo">
-      <div class="jm-header__logo__title">
-        <img class="jm-header__logo__title__logo" src="../../assets/logo2.png" alt="Logo złożone z połączonych liter inicjałów JAKMAT">
-        <h1 class="jm-header__logo__title__person">Personal Website of Jakub Matusiak, Geospatial Web Developer</h1>
+  <div class="jakmat-header">
+    <div class="jakmat-header__logo">
+      <div class="jakmat-header__logo__title">
+        <img class="jakmat-header__logo__title__logo" src="../../assets/logo2.png" alt="Logo złożone z połączonych liter inicjałów JAKMAT">
+        <h1 class="jakmat-header__logo__title__person">Personal Website of Jakub Matusiak, Geospatial Web Developer</h1>
       </div>
     </div>
-    <ul class="jm-header__menu">
+    <ul class="jakmat-header__menu">
       <li 
-        class="jm-header__menu__link"
+        class="jakmat-header__menu__link"
         :class="{
-          lab: tab.component === 'jm-lab',
+          lab: tab.component === 'jakmat-lab',
           active: tab.component === activeContent 
         }"
         v-if="tabList.length"
@@ -26,13 +26,13 @@
 import { mapGetters, mapActions } from 'vuex';
 
 export default {
-  title: 'JmHeader',
+  title: 'JakmatHeader',
 
   computed: {
     ...mapGetters(['tabs', 'lab', 'activeContent']),
 
     tabList() {
-      return this.lab ? this.tabs : this.tabs.filter(t => t.component !== 'jm-lab');
+      return this.lab ? this.tabs : this.tabs.filter(t => t.component !== 'jakmat-lab');
     }
   },
 
@@ -47,7 +47,7 @@ export default {
 @import '../../global.less';
 @import '../../mixins.less';
 
-.jm-header {  
+.jakmat-header {  
   .flex(row, center, center);
   background-color: @background-main;
   flex-wrap: wrap;
@@ -65,20 +65,20 @@ export default {
     flex-wrap: nowrap;
   });
 
-  .jm-header__logo {
+  .jakmat-header__logo {
     padding: 0 40px;
 
-    .jm-header__logo__title {
+    .jakmat-header__logo__title {
       .size(auto, 56px);
       .flex(row, center, center);
 
-      .jm-header__logo__title__logo {
+      .jakmat-header__logo__title__logo {
         display: block;
         height: 50px;
         opacity: 0.8;
       }
 
-      .jm-header__logo__title__person {
+      .jakmat-header__logo__title__person {
         width: 180px;
         font-size: 10px;
         padding: 1px 0 0 5px;
@@ -89,7 +89,7 @@ export default {
     }
   }
 
-  .jm-header__menu {
+  .jakmat-header__menu {
     .flex(row, center, flex-start);
     flex-wrap: wrap;
     padding: 0 40px;
@@ -100,7 +100,7 @@ export default {
       flex-wrap: nowrap;
     });
     
-    .jm-header__menu__link {
+    .jakmat-header__menu__link {
       cursor: pointer;
       font-size: @navbar-link-font-size;
       background: @navbar-link-background;

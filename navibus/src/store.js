@@ -10,23 +10,23 @@ export default new Vuex.Store({
     tabs: [
         {
             title: 'Tech Stack',
-            component: 'jm-about'
+            component: 'jakmat-about'
         },
         {
             title: 'Projects',
-            component: 'jm-projects'
+            component: 'jakmat-projects'
         },
         // {
         //     title: 'Inspirations',
-        //     component: 'jm-inspirations'
+        //     component: 'jakmat-inspirations'
         // },
         // {
         //     title: 'Maps',
-        //     component: 'jm-maps'
+        //     component: 'jakmat-maps'
         // },
         // {
         //     title: 'Blog',
-        //     component: 'jm-blog',
+        //     component: 'jakmat-blog',
         //     topics: [
         //       'Aleksandrów',
         //       'Łódź',
@@ -38,14 +38,14 @@ export default new Vuex.Store({
         // },
         // {
         //     title: 'Contact',
-        //     component: 'jm-contact'
+        //     component: 'jakmat-contact'
         // },
         {
           title: 'Lab',
-          component: 'jm-lab'
+          component: 'jakmat-lab'
         }
     ],
-    activeContent: 'jm-projects',
+    activeContent: 'jakmat-projects',
     lines: [
       {
         id: '1',

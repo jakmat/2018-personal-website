@@ -1,17 +1,17 @@
 <template>
-  <div class="jm-inspirations">
+  <div class="jakmat-inspirations">
     <span>Inspirations</span>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'JmInspirations',
+  name: 'JakmatInspirations',
 };
 </script>
 
 <style lang="less" scoped>
-.jm-inspirations {
+.jakmat-inspirations {
   width: 100%;
   height: 100%;
 }

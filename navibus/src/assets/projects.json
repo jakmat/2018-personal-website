@@ -7,7 +7,7 @@
     "job": "Frontend Developer",
     "company": "Leica Geosystems (Hexagon)",
     "project": "Leica ConX",
-    "description": "programming UI components, filters and 3D map for visualising construcion site machines, reference models and constructed data in real time",
+    "description": "programming 3D map-based UI for visualising construcion site workflows",
     "stack": "HTML,CSS,LESS,JavaScript,Vue.js,Cesium.js"
   },
   {

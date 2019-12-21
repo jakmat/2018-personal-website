@@ -1,9 +1,9 @@
 <template>
-  <div class="jm-tech-stack">
-    <ul class="jm-tech-stack__legend">
+  <div class="jakmat-tech-stack">
+    <ul class="jakmat-tech-stack__legend">
       <li v-for="description in legend">{{description}}</li>
     </ul>
-    <ul class="jm-tech-stack__items">
+    <ul class="jakmat-tech-stack__items">
       <li v-for="technology in stack">
         <span>{{technology.name}}</span> 
         <span>{{technology.stars}}</span>
@@ -16,7 +16,7 @@
 import technologies from '../assets/technologies.json';
 
 export default {
-  name: 'JmAbout',
+  name: 'JakmatAbout',
 
   data() {
     return {
@@ -58,16 +58,16 @@ export default {
 @import '../mixins.less';
 @import '../global.less';
 
-.jm-tech-stack {
+.jakmat-tech-stack {
   padding: 10px 0;
 
-  .jm-tech-stack__legend {
+  .jakmat-tech-stack__legend {
     font-size: @appFontSize;
     margin-left: 2px;
     margin-top: 6px;
   }
 
-  .jm-tech-stack__items {
+  .jakmat-tech-stack__items {
     .flex(column, flex-start, flex-start);
     padding-left: 40px;
 

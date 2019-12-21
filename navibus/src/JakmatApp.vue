@@ -1,19 +1,19 @@
 <template>
-  <div id="jm-app">
-    <jm-home/>
+  <div id="jakmat-app">
+    <jakmat-home/>
   </div>
 </template>
 
 <script>
 import store from 'vuex';
-import JmHome from './app/shell/JmHome.vue';
+import JakmatHome from './app/shell/JakmatHome.vue';
 
 
 export default {
-  name: 'JmApp',
+  name: 'JakmatApp',
 
   components: {
-    JmHome
+    JakmatHome
   }  
 };
 </script>

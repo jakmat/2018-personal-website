@@ -15,7 +15,7 @@ import { kamperen } from '../assets/kamperen.js';
 import _ from 'lodash';
 
 export default {
-  name: 'JmKamperen',
+  name: 'JakmatKamperen',
 
   data() {
     return {

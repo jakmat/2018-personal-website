@@ -1,18 +1,19 @@
 <template>
-  <div class="jm-contact">
-    <span>Contact</span>
+  <div class="jakmat-blog">
+    <span>Blog</span>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'JmContact',
+  name: 'JakmatBlog',
 };
 </script>
 
 <style lang="less" scoped>
-.jm-contact {
+.jakmat-blog {
   width: 100%;
   height: 100%;  
+  background-color: yellow;
 }
 </style>

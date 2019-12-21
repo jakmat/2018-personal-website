@@ -1,23 +1,23 @@
 <template>
-  <div class="jm-home">
-    <jm-header/>
-    <jm-content/>
-    <jm-footer/>
+  <div class="jakmat-home">
+    <jakmat-header/>
+    <jakmat-content/>
+    <jakmat-footer/>
   </div>
 </template>
 
 <script>
-import JmHeader from './JmHeader.vue';
-import JmContent from './JmContent.vue';
-import JmFooter from './JmFooter.vue';
+import JakmatHeader from './JakmatHeader.vue';
+import JakmatContent from './JakmatContent.vue';
+import JakmatFooter from './JakmatFooter.vue';
 
 export default {
-  name: 'JmHome',
+  name: 'JakmatHome',
 
   components: {
-    JmHeader,
-    JmContent,
-    JmFooter
+    JakmatHeader,
+    JakmatContent,
+    JakmatFooter
   },
 };
 </script>
@@ -25,19 +25,19 @@ export default {
 <style lang="less">
 @import '../../mixins.less';
 
-.jm-home {
+.jakmat-home {
   .flex(column, flex-start, flex-start);
     
-  .jm-header {
+  .jakmat-header {
     .size(100%, auto);
   }
 
-  .jm-content {
+  .jakmat-content {
     .size(100%, auto);
     overflow-y: auto;
   }
   
-  .jm-footer {
+  .jakmat-footer {
     .size(100%, 50px);
   }
 
@@ -46,16 +46,16 @@ export default {
     height: 100vh;
     overflow: hidden;
 
-    .jm-header {
+    .jakmat-header {
       .size(100%, 10%);
     }
 
-    .jm-content {
+    .jakmat-content {
       .size(100%, 85%);
       overflow-y: auto;
     }
 
-    .jm-footer {
+    .jakmat-footer {
       .size(100%, 5%);
     }
   });  

@@ -1,13 +1,13 @@
 <template>
-  <div class="jm-footer">
-    <span class="jm-footer__copyright">&copy; 2018 jakmat</span>
+  <div class="jakmat-footer">
+    <span class="jakmat-footer__copyright">&copy; 2018 jakmat</span>
   </div>
 </template>
 
 <script>
 
 export default {
-  title: 'JmFooter'
+  title: 'JakmatFooter'
 };
 </script>
 
@@ -15,12 +15,12 @@ export default {
 @import '../../global.less';
 @import '../../mixins.less';
 
-.jm-footer {
+.jakmat-footer {
   .flex(row, center, center);
   font-size: @appFontSize;
   background-color: @background-main;
   
-  .jm-footer__copyright {
+  .jakmat-footer__copyright {
     user-select: none;
   }
 

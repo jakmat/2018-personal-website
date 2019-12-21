@@ -1,5 +1,5 @@
 <template>
-  <div class="jm-map-root">
+  <div class="jakmat-map-root">
     <div id="leaflet"></div>
   </div>
 </template>
@@ -8,7 +8,7 @@
 import leaflet from 'leaflet';
 
 export default {
-  name: 'JmMapRoot',
+  name: 'JakmatMapRoot',
 
   data() {
     return {
@@ -40,7 +40,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.jm-map-root {
+.jakmat-map-root {
   // background-color: #202020;
   width: 100%;
   height: 100%;

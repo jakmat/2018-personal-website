@@ -1,23 +1,23 @@
 <template>
-  <div class="jm-projects">
-    <ul class="jm-projects__list">      
-      <li class="jm-projects__list__item jm-projects__list__item--header">
-        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--time">Start End</span>        
-        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--website">Website</span>        
-        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--company">Company</span>        
-        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--title">Project</span>        
-        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--description">Description</span>
-        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--stack">Tech Stack</span>
-        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--role">Role</span>
+  <div class="jakmat-projects">
+    <ul class="jakmat-projects__list">      
+      <li class="jakmat-projects__list__item jakmat-projects__list__item--header">
+        <span class="jakmat-projects__list__item__caption jakmat-projects__list__item__caption--time">Start - End</span>        
+        <span class="jakmat-projects__list__item__caption jakmat-projects__list__item__caption--website">Website</span>        
+        <span class="jakmat-projects__list__item__caption jakmat-projects__list__item__caption--company">Company</span>        
+        <span class="jakmat-projects__list__item__caption jakmat-projects__list__item__caption--title">Project</span>        
+        <span class="jakmat-projects__list__item__caption jakmat-projects__list__item__caption--description">Description</span>
+        <span class="jakmat-projects__list__item__caption jakmat-projects__list__item__caption--stack">Tech Stack</span>
+        <span class="jakmat-projects__list__item__caption jakmat-projects__list__item__caption--role">Role</span>
       </li>
-      <li class="jm-projects__list__item" v-for="project in projects">
-        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--time">{{project.start}} - {{project.end}}</span>        
-        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--website" :href="project.url">{{project.website}}</span>        
-        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--company">{{project.company}}</span>        
-        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--title">{{project.project}}</span>        
-        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--description">{{project.description}}</span>
-        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--stack">{{project.stack}}</span>
-        <span class="jm-projects__list__item__caption jm-projects__list__item__caption--role">{{project.role}}</span>       
+      <li class="jakmat-projects__list__item" v-for="project in projects">
+        <span class="jakmat-projects__list__item__caption jakmat-projects__list__item__caption--time">{{project.start}} - {{project.end}}</span>        
+        <span class="jakmat-projects__list__item__caption jakmat-projects__list__item__caption--website" :href="project.url">{{project.website}}</span>        
+        <span class="jakmat-projects__list__item__caption jakmat-projects__list__item__caption--company">{{project.company}}</span>        
+        <span class="jakmat-projects__list__item__caption jakmat-projects__list__item__caption--title">{{project.project}}</span>        
+        <span class="jakmat-projects__list__item__caption jakmat-projects__list__item__caption--description">{{project.description}}</span>
+        <span class="jakmat-projects__list__item__caption jakmat-projects__list__item__caption--stack">{{project.stack}}</span>
+        <span class="jakmat-projects__list__item__caption jakmat-projects__list__item__caption--role">{{project.role}}</span>       
       </li>
     </ul>
   </div>
@@ -28,7 +28,7 @@ import portfolio from '../assets/projects.json';
 import _ from 'lodash';
 
 export default {
-  name: 'JmProjects',
+  name: 'JakmatProjects',
 
   computed: {
     projects() {
@@ -58,14 +58,14 @@ export default {
 @import '../mixins.less';
 @import '../global.less';
 
-.jm-projects {
+.jakmat-projects {
 
-  .jm-projects__list {
+  .jakmat-projects__list {
     .flex(column, center, flex-start);
     flex-wrap: wrap;
     width: 100%;
 
-    .jm-projects__list__item {
+    .jakmat-projects__list__item {
       .flex(column, flex-start, flex-start);
       .size(88%, auto);
       min-height: 30px;
@@ -107,7 +107,7 @@ export default {
         });
       }
       
-      .jm-projects__list__item__caption {
+      .jakmat-projects__list__item__caption {
         margin: 0 15px;
         word-break: break-word;
         padding: 5px 0;
@@ -151,7 +151,7 @@ export default {
         });
 
         .responsive-xl({         
-          height: 40px;
+          height: 35px;
           
           &--time {
             width: @projectTimeWidthXL;

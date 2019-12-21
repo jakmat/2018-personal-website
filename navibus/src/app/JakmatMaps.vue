@@ -1,23 +1,23 @@
 <template>
-  <div class="jm-maps">
-    <jm-map-root/>
+  <div class="jakmat-maps">
+    <jakmat-map-root/>
   </div>
 </template>
 
 <script>
-import JmMapRoot from './maps/JmMapRoot.vue'
+import JakmatMapRoot from './maps/JakmatMapRoot.vue'
 
 export default {
-  name: 'JmMaps',
+  name: 'JakmatMaps',
  
   components: { 
-    JmMapRoot 
+    JakmatMapRoot 
   }
 };
 </script>
 
 <style lang="less" scoped>
-.jm-maps {
+.jakmat-maps {
   width: 100%;
   height: 100%;  
 }

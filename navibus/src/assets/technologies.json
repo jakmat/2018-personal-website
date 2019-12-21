@@ -252,12 +252,6 @@
     "level": 5
   },
   {
-    "id": 43,
-    "rank": "",
-    "name": "Blender",
-    "level": 1
-  },
-  {
     "id": 44,
     "rank": "",
     "name": "Vuetify",
@@ -266,7 +260,7 @@
   {
     "id": 45,
     "rank": "",
-    "name": "Eslint",
+    "name": "EsLint",
     "level": 5
   },
   {
