@@ -59,6 +59,8 @@ export default {
 @import '../global.less';
 
 .jakmat-projects {
+  padding: 20px 0;
+  position: relative;
 
   .jakmat-projects__list {
     .flex(column, center, flex-start);
@@ -106,6 +108,8 @@ export default {
       }
 
       &.jakmat-projects__list__item--header {
+        position: sticky;
+        top: 0;
          
       .jakmat-projects__list__item__caption {
           
