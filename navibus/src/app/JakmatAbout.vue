@@ -20,6 +20,7 @@ export default {
 .jakmat-about {
   width: 100%;
   height: 100%;
+  padding: 20px 0;
   
   h2, p {
     margin: 20px 40px;

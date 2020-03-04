@@ -59,7 +59,7 @@ export default {
 @import '../global.less';
 
 .jakmat-tech-stack {
-  padding: 10px 0;
+  padding: 40px 0;
 
   .jakmat-tech-stack__legend {
     font-size: @appFontSize;
@@ -68,15 +68,15 @@ export default {
   }
 
   .jakmat-tech-stack__items {
-    .flex(column, flex-start, flex-start);
-    padding-left: 40px;
+    .flex(column, flex-start, space-around);
+    flex-wrap: wrap;
+    max-width: 95%;
 
     li {
       .flex(row, space-between, center);
       font-size: @appFontSize;
       background-color: @itemBackgroundColor;
       border-radius: @appBorderRadius;
-      width: 90%;
       margin: 2px 0;
       padding: 5px 15px;
     } 
@@ -98,16 +98,18 @@ export default {
 
     .responsive-lg({
       .flex(column, flex-start, flex-start);
-      height: 500px;
 
       li {
         width: 30%;
-        padding: 5px 15px;      
+        margin: 5px 10px;      
       }
     });
 
     .responsive-xl({
-      height: 510px;
+      li {
+        width: 25%;
+        padding: 5px 15px;      
+      }
     });   
   }
 }

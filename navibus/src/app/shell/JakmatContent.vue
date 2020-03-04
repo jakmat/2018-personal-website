@@ -38,7 +38,8 @@ export default {
 @import '../../global.less';
 
 .jakmat-content {
-  overflow-y: auto;
+  // width: 80%;
+  // overflow-y: visible;
   background-color: @background-content;
 }
 </style>

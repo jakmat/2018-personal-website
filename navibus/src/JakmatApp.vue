@@ -27,22 +27,29 @@ export default {
     box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: @background-main;
-  color: @font-color-light;
-  font-family: @font-app;
+html {
+  width: 100vw;
+  height: 100vh;
 
-  .scrollbar();
- 
-  a {
-    text-decoration: none;
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: @background-main;
     color: @font-color-light;
-  }
-
-  ul {
-    list-style-type: none;
+    font-family: @font-app;
+  
+    .scrollbar();
+   
+    a {
+      text-decoration: none;
+      color: @font-color-light;
+    }
+  
+    ul {
+      list-style-type: none;
+    }
   }
 }
+
 </style>

@@ -10,7 +10,7 @@
         <span class="jakmat-projects__list__item__caption jakmat-projects__list__item__caption--stack">Tech Stack</span>
         <span class="jakmat-projects__list__item__caption jakmat-projects__list__item__caption--role">Role</span>
       </li>
-      <li class="jakmat-projects__list__item" v-for="project in projects">
+      <li class="jakmat-projects__list__item jakmat-projects__list__item--content" v-for="project in projects">
         <span class="jakmat-projects__list__item__caption jakmat-projects__list__item__caption--time">{{project.start}} - {{project.end}}</span>        
         <span class="jakmat-projects__list__item__caption jakmat-projects__list__item__caption--website" :href="project.url">{{project.website}}</span>        
         <span class="jakmat-projects__list__item__caption jakmat-projects__list__item__caption--company">{{project.company}}</span>        
@@ -68,12 +68,10 @@ export default {
     .jakmat-projects__list__item {
       .flex(column, flex-start, flex-start);
       .size(88%, auto);
-      min-height: 30px;
       font-size: @appFontSize;
       background-color: @itemBackgroundColor;
       border-radius: @appBorderRadius;
       margin: 5px 0;
-      padding: 10px 0;
       
       .responsive-sm({
         .size(92%, auto);
@@ -106,18 +104,35 @@ export default {
           display: flex;
         });
       }
+
+      &.jakmat-projects__list__item--header {
+         
+      .jakmat-projects__list__item__caption {
+          
+        }
+      }
+
+      &.jakmat-projects__list__item--content {
+        padding: 9px 0 10px;
+
+        .jakmat-projects__list__item__caption {
+
+        }
+      }
+
       
       .jakmat-projects__list__item__caption {
         margin: 0 15px;
         word-break: break-word;
         padding: 5px 0;
+        .flex(row, flex-start, center);
 
         .responsive-lg({
-          height: 50px;
+          min-height: 30px;
           padding: 0;
                     
           &--time {
-            width: @projectTimeWidth;
+            min-width: @projectTimeWidth;
             text-align: center;
           }
   
@@ -151,7 +166,7 @@ export default {
         });
 
         .responsive-xl({         
-          height: 35px;
+          // min-height: 30px;
           
           &--time {
             width: @projectTimeWidthXL;

@@ -53,6 +53,7 @@ export default {
     .jakmat-content {
       .size(100%, 85%);
       overflow-y: auto;
+      overflow-x: visible;
     }
 
     .jakmat-footer {
