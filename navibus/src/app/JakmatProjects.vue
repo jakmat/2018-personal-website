@@ -10,7 +10,7 @@
         <span class="jakmat-projects__list__item__caption jakmat-projects__list__item__caption--stack">Tech Stack</span>
         <span class="jakmat-projects__list__item__caption jakmat-projects__list__item__caption--role">Role</span>
       </li>
-      <li class="jakmat-projects__list__item jakmat-projects__list__item--content" v-for="project in projects">
+      <li class="jakmat-projects__list__item jakmat-projects__list__item--content" v-for="project in projects" :key="index">
         <span class="jakmat-projects__list__item__caption jakmat-projects__list__item__caption--time">{{project.start}} - {{project.end}}</span>        
         <span class="jakmat-projects__list__item__caption jakmat-projects__list__item__caption--website" :href="project.url">{{project.website}}</span>        
         <span class="jakmat-projects__list__item__caption jakmat-projects__list__item__caption--company">{{project.company}}</span>        
