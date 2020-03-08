@@ -129,7 +129,6 @@ export default new Vuex.Store({
     },
     setSelectedRoutes(state, payload) {
       state.selectedRoutes = payload;
-      console.log(state.selectedRoutes);
     }
   },
   actions: {

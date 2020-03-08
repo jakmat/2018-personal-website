@@ -24,7 +24,6 @@ export default {
     },
     toggleSelection(id) {
       const selection = this.isSelected(id) ? this.value.filter(i => i !== id) : [ ...this.value, id ];
-      console.log(selection)
       this.input(selection);
     },
     getSelection(id) {
