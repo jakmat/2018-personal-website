@@ -15,7 +15,7 @@
         }"
         v-if="tabList.length"
         v-for="tab in tabList"
-        @click="goTo(tab.component)">
+        @click="changeActiveContent(tab.component)">
         <span>{{ tab.title }}</span>
       </li>
     </ul>
@@ -37,7 +37,7 @@ export default {
   },
 
   methods: {
-    ...mapActions({ goTo: 'changeActiveContent' }),
+    ...mapActions(['changeActiveContent']),
   }
 
 };
