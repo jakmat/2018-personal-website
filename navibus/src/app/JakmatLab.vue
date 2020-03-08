@@ -1,32 +1,26 @@
 <template>
   <div class="jakmat-lab">
-    <!-- <jakmat-data :data="lines" :input="changeSelectedLines"/> -->
-    <!-- <jakmat-lang/> -->
-    <jakmat-kamperen/>
+    <jakmat-tram-routes 
+        :items="availableRoutes"
+        :value="selectedRoutes"
+        :input="setSelectedRoutes"/>
   </div>
 </template>
 
 <script>
 import { mapGetters, mapMutations } from 'vuex';
-// import JakmatData from '../modules/JakmatData';
-// import JakmatLang from '../modules/JakmatLang';
-import JakmatKamperen from '../modules/JakmatKamperen';
+import JakmatTramRoutes from '../modules/JakmatTramRoutes';
 
 export default {
   name: 'JakmatLab',
-
   components: {
-    // JakmatData,
-    // JakmatLang,
-    JakmatKamperen
+    JakmatTramRoutes,
   },
-
   computed: {
-    ...mapGetters(['lines'])
+    ...mapGetters(['availableRoutes', 'selectedRoutes'])
   },
-
   methods: {
-    ...mapMutations(['changeSelectedLines'])
+    ...mapMutations(['setSelectedRoutes'])
   }
 };
 </script>

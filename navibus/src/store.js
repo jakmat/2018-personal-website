@@ -6,7 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     variable: 0,
-    lab: false,
+    lab: true,
     tabs: [
         {
             title: 'Tech Stack',
@@ -46,7 +46,7 @@ export default new Vuex.Store({
         }
     ],
     activeContent: 'jakmat-projects',
-    lines: [
+    availableRoutes: [
       {
         id: '1',
         name: 'Doły - Chojny',
@@ -98,7 +98,7 @@ export default new Vuex.Store({
         isSelected: false
       },
     ],
-    selectedLines: []
+    selectedRoutes: []
   },
   getters: {
     variable(state) {
@@ -113,8 +113,11 @@ export default new Vuex.Store({
     activeContent(state) {
       return state.activeContent;
     },
-    lines(state) {
-      return state.lines;
+    availableRoutes(state) {
+      return state.availableRoutes;
+    },
+    selectedRoutes(state) {
+      return state.selectedRoutes;
     }
   },
   mutations: {
@@ -124,8 +127,9 @@ export default new Vuex.Store({
     setActiveContent(state, payload) {
       state.activeContent = payload;
     },
-    changeSelectedLines(state, payload) {
-      state.selectedLines = [...payload];
+    setSelectedRoutes(state, payload) {
+      state.selectedRoutes = payload;
+      console.log(state.selectedRoutes);
     }
   },
   actions: {

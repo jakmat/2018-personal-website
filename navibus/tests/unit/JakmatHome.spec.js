@@ -24,7 +24,7 @@ describe('JakmatHome', () => {
     });
   });
 
-  test('is a Vue instance', () => {
+  it('is a Vue instance', () => {
     const wrapper = shallowMount(JakmatHome, { store, localVue });
     expect(wrapper.isVueInstance()).toBeTruthy()
   })

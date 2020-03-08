@@ -2,44 +2,51 @@
   <div class="jakmat-multiselect">
     <div 
         class="jakmat-multiselect__item"
-        v-for="(item, index) in value"
+        v-for="(item, index) in items"
         :v-key="index">
-        <div>{{ getSelection(item) }}</div>
-        <span @click="toggleSelection(item)">{{ item.name }}</span>
+        <div>{{ getSelection(item.id) }}</div>
+        <span @click="toggleSelection(item.id)">{{ item.id }} {{ item.name }}</span>
     </div>  
   </div>
 </template>
 
 <script>
-// import JakmatMultiselectItem from './JakmatMultiselectItem';
-
 export default {
   name: 'JakmatMultiselect',
-
-  components: {
-    //   JakmatMultiselectItem
-  },
-
   props: {
-      value: Array,
-      input: Function
+    items: Array,
+    value: Array,
+    input: Function
   },
-
   methods: {
-    toggleSelection(item) {
-        item.isSelected = !item.isSelected;
-        this.input(this.value);
+    isSelected(id) {
+      return this.value.includes(id);
     },
-    getSelection(item) {
-        return item.isSelected ? '[ x ]' : '[  ]';
+    toggleSelection(id) {
+      const selection = this.isSelected(id) ? this.value.filter(i => i !== id) : [ ...this.value, id ];
+      console.log(selection)
+      this.input(selection);
+    },
+    getSelection(id) {
+        return this.isSelected(id) ? '[x]' : '[_]';
     }
   }
 };
 </script>
 
 <style lang="less" scoped>
-.js-multiselect {
+@import '../mixins.less';
+
+.jakmat-multiselect {
   width: 100%;
   height: 100%;
+
+  .jakmat-multiselect__item {
+    .flex(row, flex-start, center);
+
+    span {
+      margin-left: 10px;
+    }
+  }
 }
 </style>
