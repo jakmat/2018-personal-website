@@ -59,7 +59,7 @@ export default {
 @import '../global.less';
 
 .jakmat-tech-stack {
-  padding: 40px 0;
+  padding: 20px 0;
 
   .jakmat-tech-stack__legend {
     font-size: @appFontSize;

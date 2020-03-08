@@ -59,7 +59,6 @@ export default {
 @import '../global.less';
 
 .jakmat-projects {
-  padding: 20px 0;
   position: relative;
 
   .jakmat-projects__list {
