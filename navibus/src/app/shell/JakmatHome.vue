@@ -17,7 +17,7 @@ export default {
   components: {
     JakmatHeader,
     JakmatContent,
-    JakmatFooter
+    JakmatFooter,
   },
 };
 </script>
@@ -27,7 +27,7 @@ export default {
 
 .jakmat-home {
   .flex(column, flex-start, flex-start);
-    
+
   .jakmat-header {
     .size(100%, auto);
   }
@@ -37,7 +37,7 @@ export default {
     overflow-y: auto;
     padding: 40px 0;
   }
-  
+
   .jakmat-footer {
     .size(100%, 50px);
   }
@@ -60,6 +60,6 @@ export default {
     .jakmat-footer {
       .size(100%, 5%);
     }
-  });  
+  });
 }
 </style>

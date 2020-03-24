@@ -13,7 +13,7 @@ export default {
 <style lang="less" scoped>
 .jakmat-blog {
   width: 100%;
-  height: 100%;  
+  height: 100%;
   background-color: yellow;
 }
 </style>

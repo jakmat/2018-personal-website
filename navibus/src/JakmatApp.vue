@@ -13,8 +13,8 @@ export default {
   name: 'JakmatApp',
 
   components: {
-    JakmatHome
-  }  
+    JakmatHome,
+  },
 };
 </script>
 
@@ -38,14 +38,14 @@ html {
     background-color: @background-main;
     color: @font-color-light;
     font-family: @font-app;
-  
+
     .scrollbar();
-   
+
     a {
       text-decoration: none;
       color: @font-color-light;
     }
-  
+
     ul {
       list-style-type: none;
     }

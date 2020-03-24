@@ -13,13 +13,13 @@ import JakmatMultiselect from '@/components/JakmatMultiselect';
 export default {
   name: 'JakmatTramRoutes',
   components: {
-    JakmatMultiselect
+    JakmatMultiselect,
   },
   props: {
     items: Array,
     value: Array,
-    input: Function
-  }
+    input: Function,
+  },
 };
 </script>
 

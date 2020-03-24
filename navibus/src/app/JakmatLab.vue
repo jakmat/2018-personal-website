@@ -1,6 +1,6 @@
 <template>
   <div class="jakmat-lab">
-    <jakmat-tram-routes 
+    <jakmat-tram-routes
         :items="availableRoutes"
         :value="selectedRoutes"
         :input="setSelectedRoutes"/>
@@ -17,11 +17,11 @@ export default {
     JakmatTramRoutes,
   },
   computed: {
-    ...mapGetters(['availableRoutes', 'selectedRoutes'])
+    ...mapGetters(['availableRoutes', 'selectedRoutes']),
   },
   methods: {
-    ...mapMutations(['setSelectedRoutes'])
-  }
+    ...mapMutations(['setSelectedRoutes']),
+  },
 };
 </script>
 

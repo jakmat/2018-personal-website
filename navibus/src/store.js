@@ -8,97 +8,97 @@ export default new Vuex.Store({
     variable: 0,
     lab: true,
     tabs: [
-        {
-            title: 'Tech Stack',
-            component: 'jakmat-tech-stack'
-        },
-        {
-            title: 'Projects',
-            component: 'jakmat-projects'
-        },
-        {
-            title: 'About',
-            component: 'jakmat-about'
-        },
-        // {
-        //     title: 'Inspirations',
-        //     component: 'jakmat-inspirations'
-        // },
-        // {
-        //     title: 'Maps',
-        //     component: 'jakmat-maps'
-        // },
-        // {
-        //     title: 'Blog',
-        //     component: 'jakmat-blog',
-        //     topics: [
-        //       'Aleksandrów',
-        //       'Łódź',
-        //       'Nijmegen',
-        //       'Borszczów',
-        //       'angielski / słówka',
-        //       'niderlandzki / słówka'              
-        //     ]
-        // },
-        {
-          title: 'Lab',
-          component: 'jakmat-lab'
-        }
+      {
+        title: 'Tech Stack',
+        component: 'jakmat-tech-stack',
+      },
+      {
+        title: 'Projects',
+        component: 'jakmat-projects',
+      },
+      {
+        title: 'About',
+        component: 'jakmat-about',
+      },
+      // {
+      //     title: 'Inspirations',
+      //     component: 'jakmat-inspirations'
+      // },
+      // {
+      //     title: 'Maps',
+      //     component: 'jakmat-maps'
+      // },
+      // {
+      //     title: 'Blog',
+      //     component: 'jakmat-blog',
+      //     topics: [
+      //       'Aleksandrów',
+      //       'Łódź',
+      //       'Nijmegen',
+      //       'Borszczów',
+      //       'angielski / słówka',
+      //       'niderlandzki / słówka'
+      //     ]
+      // },
+      {
+        title: 'Lab',
+        component: 'jakmat-lab',
+      },
     ],
     activeContent: 'jakmat-projects',
     availableRoutes: [
       {
         id: '1',
         name: 'Doły - Chojny',
-        isSelected: false
+        isSelected: false,
       },
       {
         id: '2',
         name: 'Teofilów - Dąbrowa',
-        isSelected: false
+        isSelected: false,
       },
       {
         id: '3',
         name: 'Marysin - Augustów',
-        isSelected: false
+        isSelected: false,
       },
       {
         id: '4',
         name: 'Helenówek - Dąbrpwa',
-        isSelected: false
+        isSelected: false,
       },
       {
         id: '5',
         name: 'Żabieniec - Kurczaki',
-        isSelected: false
+        isSelected: false,
       },
       {
         id: '6',
         name: 'Doły - Kurczaki',
-        isSelected: false
+        isSelected: false,
       },
       {
         id: '7',
         name: 'Koziny - Niższa',
-        isSelected: false
+        isSelected: false,
       },
       {
         id: '8',
         name: 'Kochanówka - Lodowa',
-        isSelected: false
+        isSelected: false,
       },
       {
         id: '9',
         name: 'Olechów - Zdrowie',
-        isSelected: false
+        isSelected: false,
       },
       {
         id: '10',
         name: 'Olechów - Retkinia',
-        isSelected: false
+        isSelected: false,
       },
     ],
-    selectedRoutes: []
+    selectedRoutes: [],
   },
   getters: {
     variable(state) {
@@ -118,7 +118,7 @@ export default new Vuex.Store({
     },
     selectedRoutes(state) {
       return state.selectedRoutes;
-    }
+    },
   },
   mutations: {
     setVariable(state, payload) {
@@ -129,7 +129,7 @@ export default new Vuex.Store({
     },
     setSelectedRoutes(state, payload) {
       state.selectedRoutes = payload;
-    }
+    },
   },
   actions: {
     async changeVariable(context, payload) {
@@ -137,6 +137,6 @@ export default new Vuex.Store({
     },
     changeActiveContent(context, payload) {
       context.commit('setActiveContent', payload);
-    }
+    },
   },
 });

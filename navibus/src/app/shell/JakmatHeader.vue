@@ -7,11 +7,11 @@
       </div>
     </div>
     <ul class="jakmat-header__menu">
-      <li 
+      <li
         class="jakmat-header__menu__link"
         :class="{
           lab: tab.component === 'jakmat-lab',
-          active: tab.component === activeContent 
+          active: tab.component === activeContent
         }"
         v-if="tabList.length"
         v-for="tab in tabList"
@@ -33,12 +33,12 @@ export default {
 
     tabList() {
       return this.lab ? this.tabs : this.tabs.filter(t => t.component !== 'jakmat-lab');
-    }
+    },
   },
 
   methods: {
     ...mapActions(['changeActiveContent']),
-  }
+  },
 
 };
 </script>
@@ -47,12 +47,12 @@ export default {
 @import '../../global.less';
 @import '../../mixins.less';
 
-.jakmat-header {  
+.jakmat-header {
   .flex(row, center, center);
   background-color: @background-main;
   flex-wrap: wrap;
   padding-top: 20px;
-    
+
   .responsive-sm({
     .flex(row, flex-start, center);
   });
@@ -60,8 +60,8 @@ export default {
   .responsive-md({
     padding-top: 0;
   });
-  
-  .responsive-lg({    
+
+  .responsive-lg({
     flex-wrap: nowrap;
   });
 
@@ -95,11 +95,11 @@ export default {
     padding: 0 40px;
 
 
-    .responsive-lg({    
+    .responsive-lg({
       .flex(row, flex-start, flex-start);
       flex-wrap: nowrap;
     });
-    
+
     .jakmat-header__menu__link {
       cursor: pointer;
       font-size: @navbar-link-font-size;
@@ -121,10 +121,10 @@ export default {
         .size(100px, auto);
         margin: 5px 10px;
       });
-      
+
       &.lab {
         background-color: @navbar-link-background-lab;
-        
+
         &:hover {
           background-color: @navbar-link-background-lab-hover;
         }
@@ -133,7 +133,7 @@ export default {
           background-color: @navbar-link-background-lab-active;
         }
       }
-      
+
       &:hover {
         background-color: @navbar-link-background-hover;
       }

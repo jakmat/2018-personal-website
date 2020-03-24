@@ -1,23 +1,23 @@
 <template>
   <div class="chips">
     <div class="chips__container">
-        <div 
+        <div
             class="chips__container--chip"
             v-for="(item, index) in value"
             :key="index"
             v-if="item.isSelected">
-            <span>{{item.id}} {{item.name}}</span>    
+            <span>{{item.id}} {{item.name}}</span>
         </div>
         <!-- <jakmat-chip/> -->
     </div>
     <div class="chips__combobox">
-        <div 
+        <div
             class="chips__combobox--option"
             v-for="(item, index) in value"
             :key="index"
             v-if="value.length">
             <input type="checkbox" id="checkbox" v-model="item.isSelected">
-            <label for="checkbox">{{item.id}} {{item.name}}</label>    
+            <label for="checkbox">{{item.id}} {{item.name}}</label>
         </div>
     </div>
   </div>
@@ -37,18 +37,18 @@ export default {
   },
 
   props: {
-      value: Array
+    value: Array,
   },
 
   data() {
     return {
-        
+
     };
   },
 
   computed: {
 
-  }
+  },
 };
 </script>
 

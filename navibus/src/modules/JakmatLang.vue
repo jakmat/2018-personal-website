@@ -10,30 +10,28 @@
 </template>
 
 <script>
-import * as data from '../assets/dutch2000.csv';
 import _ from 'lodash';
+import * as data from '../assets/dutch2000.csv';
 
 export default {
   name: 'JakmatLang',
 
   data() {
     return {
-        source: '',
-        // vocabulary: []
+      source: '',
+      // vocabulary: []
     };
   },
 
   computed: {
     vocabulary() {
-        const words = _.map(data, (word) => {
-            return {
-                rank: word.Rank,
-                nl: word.Dutch,
-                en: word.English
-            };
-        });
-        return words;
-    }
+      const words = _.map(data, word => ({
+        rank: word.Rank,
+        nl: word.Dutch,
+        en: word.English,
+      }));
+      return words;
+    },
   },
 
 };

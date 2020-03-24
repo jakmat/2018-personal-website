@@ -5,7 +5,7 @@
     </ul>
     <ul class="jakmat-tech-stack__items">
       <li v-for="technology in stack">
-        <span>{{technology.name}}</span> 
+        <span>{{technology.name}}</span>
         <span>{{technology.stars}}</span>
       </li>
     </ul>
@@ -26,22 +26,20 @@ export default {
         '**** // repeatedly, in current projects',
         '*** // widely, in past projects',
         '** // in order to fulfill minor tasks in the past projects',
-        '* // aiming to acquire some basic understanding'
-      ]
+        '* // aiming to acquire some basic understanding',
+      ],
     };
   },
 
   computed: {
     stack() {
-      return technologies.map((i) => {
-        return {
-          ...i,
-          stars: this.getStars(i)
-        };
-      }).sort((i,j) => j.level - i.level);
-    }
+      return technologies.map(i => ({
+        ...i,
+        stars: this.getStars(i),
+      })).sort((i, j) => j.level - i.level);
+    },
   },
- 
+
   methods: {
     getStars(item) {
       let stars = '';
@@ -49,8 +47,8 @@ export default {
         stars += '*';
       }
       return stars;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -79,7 +77,7 @@ export default {
       border-radius: @appBorderRadius;
       margin: 2px 0;
       padding: 5px 15px;
-    } 
+    }
 
     .responsive-sm({
       flex-wrap: wrap;
@@ -101,16 +99,16 @@ export default {
 
       li {
         width: 30%;
-        margin: 5px 10px;      
+        margin: 5px 10px;
       }
     });
 
     .responsive-xl({
       li {
         width: 25%;
-        padding: 5px 15px;      
+        padding: 5px 15px;
       }
-    });   
+    });
   }
 }
 </style>

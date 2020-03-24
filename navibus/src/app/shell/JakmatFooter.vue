@@ -7,7 +7,7 @@
 <script>
 
 export default {
-  title: 'JakmatFooter'
+  title: 'JakmatFooter',
 };
 </script>
 
@@ -19,7 +19,7 @@ export default {
   .flex(row, center, center);
   font-size: @appFontSize;
   background-color: @background-main;
-  
+
   .jakmat-footer__copyright {
     user-select: none;
   }

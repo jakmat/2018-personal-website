@@ -24,11 +24,11 @@ export default {
     // JakmatInspirations,
     // JakmatMaps,
     // JakmatBlog,
-    JakmatLab
+    JakmatLab,
   },
-  
+
   computed: {
-    ...mapGetters(['activeContent'])
+    ...mapGetters(['activeContent']),
   },
 };
 </script>

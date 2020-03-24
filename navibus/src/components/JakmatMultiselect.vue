@@ -1,12 +1,13 @@
 <template>
   <div class="jakmat-multiselect">
-    <div 
+    <div
         class="jakmat-multiselect__item"
         v-for="(item, index) in items"
-        :v-key="index">
+        :v-key="index"
+        @click="toggleSelection(item.id)">
         <div>{{ getSelection(item.id) }}</div>
-        <span @click="toggleSelection(item.id)">{{ item.id }} {{ item.name }}</span>
-    </div>  
+        <span>{{ item.id }} {{ item.name }}</span>
+    </div>
   </div>
 </template>
 
@@ -16,20 +17,23 @@ export default {
   props: {
     items: Array,
     value: Array,
-    input: Function
+    input: Function,
   },
   methods: {
     isSelected(id) {
       return this.value.includes(id);
     },
     toggleSelection(id) {
-      const selection = this.isSelected(id) ? this.value.filter(i => i !== id) : [ ...this.value, id ];
+      const selection = this.isSelected(id) ? this.value.filter(i => i !== id) : [...this.value, id];
       this.input(selection);
     },
     getSelection(id) {
-        return this.isSelected(id) ? '[x]' : '[_]';
-    }
-  }
+      return this.isSelected(id) ? '[x]' : '[_]';
+    },
+    clear() {
+      this.input([]);
+    },
+  },
 };
 </script>
 

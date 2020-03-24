@@ -2,18 +2,50 @@ import { shallowMount, createLocalVue } from '@vue/test-utils';
 import JakmatMultiselect from '@/components/JakmatMultiselect.vue';
 import Vuex from 'vuex';
 
-const localVue = createLocalVue()
+const localVue = createLocalVue();
 localVue.use(Vuex);
 
 describe('JakmatMultiselect', () => {
   let wrapper;
-  let propsData;
   let store;
   let actions;
 
-  beforeEach(() => {    
+  const availableItems = [
+    {
+      id: '1',
+      name: 'Doły - Chojny',
+    },
+    {
+      id: '2',
+      name: 'Teofilów - Dąbrowa',
+    },
+    {
+      id: '3',
+      name: 'Marysin - Augustów',
+    },
+    {
+      id: '4',
+      name: 'Helenówek - Dąbrpwa',
+    },
+  ];
+
+  const selectedItems = ['2', '4'];
+
+  const factory = () => {
+    wrapper = shallowMount(JakmatMultiselect, {
+      store,
+      localVue,
+      propsData: {
+        items: availableItems,
+        value: selectedItems,
+        input: jest.fn(),
+      },
+    });
+  };
+
+  beforeEach(() => {
     actions = {
-      changeActiveContent: jest.fn()
+      changeActiveContent: jest.fn(),
     };
     store = new Vuex.Store({
       state: {},
@@ -22,26 +54,9 @@ describe('JakmatMultiselect', () => {
         lab: jest.fn(),
         activeContent: jest.fn(),
       },
-      actions
+      actions,
     });
-    propsData = {
-      items: [
-        {
-          id: '1',
-          name: 'Doły - Chojny'
-        },
-        {
-          id: '2',
-          name: 'Teofilów - Dąbrowa'
-        },
-        {
-          id: '3',
-          name: 'Marysin - Augustów'
-        }
-      ],
-      value: [],
-    };
-    wrapper = shallowMount(JakmatMultiselect, { store, localVue, propsData });
+    factory();
   });
 
   it('is a Vue instance', () => {
@@ -49,26 +64,25 @@ describe('JakmatMultiselect', () => {
   });
 
   it('has list of 3 available items', () => {
-    expect(wrapper.vm.items).toHaveLength(3);
+    expect(wrapper.vm.items).toHaveLength(4);
   });
 
   it('has an empty list of selected items', () => {
-    expect(wrapper.vm.value).toHaveLength(0);
+    expect(wrapper.vm.value).toHaveLength(2);
   });
 
   it('calls input method with first item', () => {
-    const [item1, item2, item3] = wrapper.vm.items;
+    const { id } = wrapper.vm.items[0];
     const f = jest.fn();
     wrapper.vm.input = f;
-    f(item1.id);
-    expect(f).toHaveBeenCalledWith(item1.id);
+    f(id);
+    expect(f).toHaveBeenCalledWith('1');
   });
 
   it('calls input method with third item', () => {
-    const [item1, item2, item3] = wrapper.vm.items;
-    const f = jest.fn();
-    wrapper.vm.input = f;
-    f(item3.id);
-    expect(f).toHaveBeenCalledWith(item3.id);
+    const { id } = wrapper.vm.items[2];
+    wrapper.vm.input = jest.fn(id => wrapper.vm.value.push(id));
+    wrapper.vm.input(id);
+    expect(wrapper.vm.value).toHaveLength(3);
   });
-})
+});
