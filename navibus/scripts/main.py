@@ -8,7 +8,7 @@ timescale = load.timescale()
 def get_astrometric(celestial_obj, observer_pos, observer_time):
     return observer_pos.at(observer_time).observe(celestial_obj).apparent()
 
-def get_time():
+def get_lodz_time():
     central = timezone('Europe/Warsaw')
     d = datetime(2014, 1, 16, 1, 32, 9)
     c = central.localize(d)
@@ -21,20 +21,35 @@ def get_time():
     print('EST: ' + str(dt))
     return t
 
-
-def get_lodz_position():
+def get_position(location):
     earth = planets['earth']
-    return earth + Topos('51.0 N', '19.0 W')
+    return earth + Topos(location.longitude, location.latitude)
 
-def print_ephemerides_for_lodz(obj, time):
+def print_ephemerides(obj, location, time):
     object = planets[obj]
     obj_name = obj.capitalize()
-    lodz = get_lodz_position()
-    astrometric = get_astrometric(object, lodz, time)
+    loc_name = location.name
+    loc_coords = get_position(location)
+    astrometric = get_astrometric(object, loc_coords, time)
     alt, az, distance = astrometric.altaz()
     tm = time.utc_datetime()
-    template = Template('Pozycja ${obj_name} dla Łodzi o czasie $tm: * Azymut: ${az} | * Wysokość: ${alt}').substitute(obj_name=obj_name, tm=tm, az=az, alt=alt)
+    template = Template('Pozycja ${obj_name} dla ${loc_name} o czasie $tm: * Azymut: ${az} | * Wysoko ść: ${alt}').substitute(obj_name=obj_name, loc_name=loc_name, tm=tm, az=az, alt=alt)
     print(template)
 
-local_time = get_time()
-print_ephemerides_for_lodz('venus', local_time)
+class Location:
+    def __init__(self, name, longitude, latitude):
+        self.name = name
+        self.longitude = longitude
+        self.latitude = latitude
+
+planet = 'venus'
+ldz = Location('Łódź', '51.0 N', '19.0 W')
+# alx = Location('Aleksandrów Łódzki', +51.8146634, +19.2659747)
+# lodz_location = get_lodz_position()
+lodz_time = get_lodz_time()
+# print_ephemerides(planet, lodz_location, lodz_time)
+# print_ephemerides(planet, alx, lodz_time)
+print_ephemerides(planet, ldz, lodz_time)
+
+observables = ['sun', 'moon', 'mercury', 'venus', 'mars', 'jupiter', 'saturn']
+
