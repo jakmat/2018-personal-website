@@ -13,16 +13,25 @@ class Celestial:
         planets = load('de421.bsp')
         self.object = planets[self.name]
 
-    def observe(self, location, time):
+    # def observe(self, location, time):
+    #     astrometric = location.position.at(time.astrometric_dt).observe(self.object).apparent()
+    #     obj_name = self.caption
+    #     loc_name = location.name
+    #     alt, az, distance = astrometric.altaz()
+    #     tm = time.local_dt
+    #     observation = Template(
+    #         'Obserwuję ${obj_name} w miejscowości ${loc_name} o czasie $tm: * Azymut: ${az} | * Wysokość: ${alt}').substitute(
+    #         obj_name=obj_name, loc_name=loc_name, tm=tm, az=az, alt=alt)
+    #     print(observation)
+
+    def get_observation(self, location, time):
         astrometric = location.position.at(time.astrometric_dt).observe(self.object).apparent()
         obj_name = self.caption
         loc_name = location.name
         alt, az, distance = astrometric.altaz()
         tm = time.local_dt
-        observation = Template(
-            'Obserwuję ${obj_name} w miejscowości ${loc_name} o czasie $tm: * Azymut: ${az} | * Wysokość: ${alt}').substitute(
-            obj_name=obj_name, loc_name=loc_name, tm=tm, az=az, alt=alt)
-        print(observation)
+        observation = { obj_name, az, alt, loc_name, tm }
+        return observation
 
 class Location:
     def __init__(self, name, longitude, latitude):
@@ -50,22 +59,45 @@ class DateTime:
         self.universal_dt = self.astrometric_dt.utc_datetime()
         self.local_dt = self.astrometric_dt.astimezone(central)
 
-def perform_observations():
-    for observable in observables:
-        object = Celestial(observable)
-        object.observe(place, time)
+    def get_range(self):
 
+        return month_range
+
+class Observation:
+    def __init(self, name, azimuth, altitude, place, time):
+        self.name = name
+        self.azimuth = azimuth
+        self.altitude = altitude
+        self.place = place
+        self.time = time
+
+def perform_observation(object):
+    # for observable in observables:
+    celestial = Celestial(object)
+    place = Location('Łódź', '51.0 N', '19.0 W')
+    time = DateTime(1585254836)
+    observation = celestial.get_observation(place, time)
+
+    return observation
+
+# r = perform_observation('venus')
+# print(r)
 #-----INPUT----------------------------------
 #1. Coords
-place = Location('Łódź', '51.0 N', '19.0 W')
+# place = Location('Łódź', '51.0 N', '19.0 W')
 #2. Time/Time range
-time = DateTime(1585254836)
+# time = DateTime(1585254836)
 #3. Celestial objects
-observables = ['sun', 'moon', 'mercury', 'venus', 'mars']
+# observables = ['sun', 'moon', 'mercury', 'venus', 'mars']
 #-----MIDDLEWARE----------------------------------
 # -cardinal world direction enum
 # -from decimal coords to semi-decimal
 # -get other planets
+# -get sunset, sunrise and midnight times
+# -get 1-day intervals from 1st till 1st
+# -compute 3 lists for each night time for each day
+# -eliminate objects below horizon
 #-----OUTPUT----------------------------------
-perform_observations()
+ # perform_observation('venus')
+# print(datetime.time(time.timestamp))
 #---------------------------------------------
