@@ -1,9 +1,12 @@
 <template>
   <div class="jakmat-lab">
-    <jakmat-tram-routes
-        :items="availableRoutes"
-        :value="selectedRoutes"
-        :input="setSelectedRoutes"/>
+    <div class="planets" v-if="astro">
+      <span>{{ astro }}</span>
+    </div>
+<!--    <jakmat-tram-routes-->
+<!--        :items="availableRoutes"-->
+<!--        :value="selectedRoutes"-->
+<!--        :input="setSelectedRoutes"/>-->
   </div>
 </template>
 
@@ -17,16 +20,35 @@ export default {
   components: {
     JakmatTramRoutes,
   },
+  data() {
+    return {
+      planets: null
+    };
+  },
   computed: {
     ...mapGetters(['availableRoutes', 'selectedRoutes']),
+    astro() {
+      if (!this.planets) return null;
+      const { azimuth, altitude, objective, place, time } = this.planets;
+      return `Obserwuję ${objective} w ${place}, dn. ${time}, kierunek: ${azimuth}, wysokość: ${altitude}`;
+    }
   },
   methods: {
     ...mapMutations(['setSelectedRoutes']),
+    api() {
+      return axios
+        .get('http://127.0.0.1:5000/api/v1/planets/all')
+        .then((response) => {
+          return response.data;
+        });
+    },
+    async fetchPlanets() {
+      const planets = await this.api();
+      this.planets = planets;
+    }
   },
   mounted() {
-    axios
-      .get('http://127.0.0.1:5000/api/v1/planets/all')
-      .then(response => console.log(response));
+    this.fetchPlanets();
   },
 };
 </script>
@@ -35,5 +57,9 @@ export default {
 .jakmat-lab {
   width: 100%;
   height: 100%;
+
+  .planets {
+    padding: 20px 40px;
+  }
 }
 </style>
