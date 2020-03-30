@@ -30,7 +30,14 @@ class Celestial:
         loc_name = location.name
         alt, az, distance = astrometric.altaz()
         tm = time.local_dt
-        observation = { obj_name, az, alt, loc_name, tm }
+
+        observation = {
+            'objective': obj_name,
+            'azimuth': az.degrees,
+            'altitude': alt.degrees,
+            'place': loc_name,
+            'time': tm.strftime("%d.%m.%Y, %H:%M")
+        }
         return observation
 
 class Location:
@@ -74,12 +81,11 @@ class Observation:
 def perform_observation(object):
     # for observable in observables:
     celestial = Celestial(object)
-    place = Location('Łódź', '51.0 N', '19.0 W')
+    place = Location('Lodz', '51.0 N', '19.0 W')
     time = DateTime(1585254836)
     observation = celestial.get_observation(place, time)
-
     return observation
-
+perform_observation('venus')
 # r = perform_observation('venus')
 # print(r)
 #-----INPUT----------------------------------

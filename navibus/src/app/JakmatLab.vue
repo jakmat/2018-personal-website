@@ -9,6 +9,7 @@
 
 <script>
 import { mapGetters, mapMutations } from 'vuex';
+import axios from 'axios';
 import JakmatTramRoutes from '../modules/JakmatTramRoutes';
 
 export default {
@@ -21,6 +22,11 @@ export default {
   },
   methods: {
     ...mapMutations(['setSelectedRoutes']),
+  },
+  mounted() {
+    axios
+      .get('http://127.0.0.1:5000/api/v1/planets/all')
+      .then(response => console.log(response));
   },
 };
 </script>
